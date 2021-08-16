@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "campus": "yarn add @campus/css @campus/hslulogo @campus/login @campus/pagename @campus/leftnavigation @campus/types",
+    "aspida-w": "aspida --watch",
+    "aspida-b": "aspida --build",
+    "devstart": "cross-env HOST=localhost PORT=3333 NODE_ENV=dev nuxt",
+    "dev": "npm-run-all --parallel aspida-w  devstart",
+    "int": "cross-env NODE_ENV=int nuxt build",
+    "prod": "cross-env NODE_ENV=prod nuxt build",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -11,9 +17,14 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@aspida/axios": "^1.7.1",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/date-fns": "^1.5.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/i18n": "^7.0.2",
     "core-js": "^3.15.1",
+    "cross-env": "^7.0.3",
     "nuxt": "^2.15.7",
     "vuetify": "^2.5.5"
   },
@@ -21,6 +32,7 @@
     "@babel/eslint-parser": "^7.14.7",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/composition-api": "^0.26.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/vuetify": "^1.12.1",
@@ -28,6 +40,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "yarn-run-all": "^3.1.1"
   }
 }
