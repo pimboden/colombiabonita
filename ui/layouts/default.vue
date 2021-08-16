@@ -1,6 +1,7 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
+  <v-app>
+    <color-mode-picker />
+    <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -26,7 +27,6 @@
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
-      fixed
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -56,7 +56,7 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-    </v-app-bar>
+    </v-app-bar> -->
     <v-main>
       <v-container>
         <Nuxt />

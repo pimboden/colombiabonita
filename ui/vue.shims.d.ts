@@ -20,3 +20,7 @@ declare module '@nuxtjs/composition-api' {
     readonly refs: { [key: string]: Vue | Element | Vue[] | Element[] }
   }
 }
+declare module "*.svg" {
+  const content: any;
+  export default content;
+}

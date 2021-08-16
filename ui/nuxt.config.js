@@ -24,12 +24,11 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/styles/colombia-bonita.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
-
+  plugins: [{ src: '~/plugins/api.ts' },{ src: '~/plugins/axios.ts' }],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -44,7 +43,9 @@ export default {
     ['@nuxtjs/dotenv', { filename: '.env.dev' }],
     // https://github.com/nuxt-community/date-fns-module#readme
     // Doc: https://date-fns.org/docs/Getting-Started
-    '@nuxtjs/date-fns'
+    '@nuxtjs/date-fns',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/svg'
   ],
   dateFns: {
     locales: ['es', 'de', 'enUS'],
@@ -107,9 +108,9 @@ export default {
   },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/styles/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
