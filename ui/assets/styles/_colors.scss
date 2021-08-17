@@ -5,6 +5,9 @@
   --bg: #f3f5f4;
   --bg-secondary: #fff;
   --border-color: #ddd;
+  --color-slogan: #1C2D69;
+  --color-nav-bg: #FCBF00;
+  --color-nav-fg: #3f3f3e;
 }
 
 .dark-mode {
@@ -14,6 +17,10 @@
   --bg: #091a28;
   --bg-secondary: #071521;
   --border-color: #0d2538;
+  --color-dark-blue: #1C2D69;
+  --color-slogan: #ffffff;
+  --color-nav-bg: #FCBF00;
+  --color-nav-fg: #3f3f3e;
 }
 
 $color: var(--color);
@@ -22,3 +29,6 @@ $color-secondary:var(--color-secondary);
 $bg: var(--bg);
 $bg-secondary: var(--bg-secondary);
 $border-color: var(--border-color);
+$color-slogan: var(--color-slogan);
+$color-nav-bg: var(--color-nav-bg);
+$color-nav-fg: var(--color-nav-fg);

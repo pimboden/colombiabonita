@@ -1,0 +1,22 @@
+.lang-changer{
+ .lang-div{
+   cursor: pointer;
+   img{
+     max-width: 50px;
+     max-height: 50px;
+   }
+   .lang-changer-text{
+      position:relative; 
+      top:-15px;
+      left:5px; 
+      text-transform: uppercase;
+  }
+
+  &.active{
+    .lang-changer-text{
+      font-weight: bold;
+    }
+  }
+ }
+ 
+}

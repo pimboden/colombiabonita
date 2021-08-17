@@ -1,0 +1,28 @@
+.main-nav{
+
+  .theme--dark.v-toolbar.v-sheet,
+  .theme--light.v-toolbar.v-sheet{
+    background-color: $color-nav-bg;
+  }
+  .theme--dark.v-btn,
+  .theme--light.v-btn{
+    color: $color-nav-fg;
+  }
+
+  .nav-item{
+    .v-btn:not(.v-btn--round).v-size--default{
+      height: 4rem;
+    }
+  }
+  .navspacer{
+    width: 1px;
+    border: 1px solid $color-nav-fg;
+  }
+  .subheader{
+    font-size: 1rem;
+
+  }
+  .child-item{
+    padding-left: 10px;
+  }
+}

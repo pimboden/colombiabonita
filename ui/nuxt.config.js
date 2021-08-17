@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/assets/icons/favicon-32x32.png' }
     ]
   },
 
@@ -53,11 +53,11 @@ export default {
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/i18n'
+    '@nuxt/content'
   ],
   i18n: {
     strategy: 'prefix',
@@ -66,27 +66,27 @@ export default {
         code: 'es',
         name: 'Spanish',
         iso: 'es-CO',
-        file: 'es.json'
+        file: 'es.js'
       },
       {
         code: 'de',
         name: 'German',
         iso: 'de-CH',
-        file: 'de.json'
+        file: 'de.js'
       },
       {
         code: 'en',
         name: 'English',
         iso: 'en-US',
-        file: 'en.json'
+        file: 'en.js'
       }
     ],
     defaultLocale: 'es',
-    lazy: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: process.env.npm_package_name + '_language'
     },
+    lazy:false,
     langDir: 'locales/',
     vueI18n: {
       fallbackLocale: 'es'

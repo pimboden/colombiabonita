@@ -1,6 +1,19 @@
 @import '_colors.scss';
-
+@import '_langChanger.scss' ;
+@import '_mainNav.scss';
 body {
   background-color: $bg;
   color: $color;
+
+  .slogan{
+    color: $color-slogan;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+  }
+  .main-logo{
+    max-width: 350px;
+    max-height: 100px;
+  }
+  
 }

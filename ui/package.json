@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "campus": "yarn add @campus/css @campus/hslulogo @campus/login @campus/pagename @campus/leftnavigation @campus/types",
     "aspida-w": "aspida --watch",
     "aspida-b": "aspida --build",
     "devstart": "cross-env HOST=localhost PORT=3333 NODE_ENV=dev nuxt",
