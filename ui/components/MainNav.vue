@@ -51,7 +51,7 @@
         </div>
       </v-toolbar-items>
     </v-toolbar>
-    <v-navigation-drawer v-model="drawer" fixed app>
+    <v-navigation-drawer v-model="drawer" fixed app  class="hidden-md-and-up">
       <v-list>
         <template v-for="navItem in navItems">
           <template v-if="navItem.childs.length > 0">

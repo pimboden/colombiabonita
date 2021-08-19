@@ -13,44 +13,24 @@
         </v-col>
       </v-row>
        <v-row>
-         <v-col cols="12">
+         <v-col cols="12" class="pb-0">
           <main-nav />
          </v-col>
        </v-row>
+       <v-row>
+         <v-col cols="12" class="main-content-wrapper">
+           <v-main class="pl-0">
+           <nuxt/>
+           </v-main>
+         </v-col>
+       </v-row>
     </v-container>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <cb-footer />
   </v-app>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
+
 }
 </script>

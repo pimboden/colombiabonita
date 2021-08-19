@@ -12,6 +12,17 @@ export default async () => {
   "sloganComp":{
     "text":"!Authentic and magic!"
   },
+  "cbFooterComp":{
+    "title1":"Follow us",
+    "altYoutubeLogo":"Youtube logo",
+    "altFbLogo":"Facebook logo",
+    "altInstLogo":"Instagram logo",
+    "title2":"Contact us",
+    "phone":"+57 311 421 31 87",
+    "altTel":"Image o a phone handset",
+    "email":"info@colombiabonita.com",
+    "altEmail":"Image of an envelope"
+  },
   "mainLogoComp":{
     "alt":"Logo with an abstract parrot with the colors of Colombia and the text Colombia bonita"
   },

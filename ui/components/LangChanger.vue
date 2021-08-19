@@ -34,7 +34,6 @@ export default defineComponent({
         }
       ])
      const changeLanguage = (code) => {
-       debugger
       context.root.$i18n.setLocale(code)
       context.root.$axios.defaults.headers.common['Accept-Language'] = code
       document.querySelector('html').setAttribute('lang', code)

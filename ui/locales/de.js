@@ -12,6 +12,17 @@ export default async () => {
   "sloganComp":{
     "text":"!Authentisch und zauberhaft!"
   },
+  "cbFooterComp":{
+    "title1":"Folgen Sie uns",
+    "altYoutubeLogo":"Youtube Logo",
+    "altFbLogo":"Facebook Logo",
+    "altInstLogo":"Instagram Logo",
+    "title2":"Kontaktieren Sie uns",
+    "phone":"+57 311 421 31 87",
+    "altTel":"Bild eines Telefonhörers",
+    "email":"info@colombiabonita.com",
+    "altEmail":"Bild eines Briefumschlags"
+  },
   "mainLogoComp":{
     "alt":"Logo mit einem abstrakten Papagei in den Farben Kolumbiens und dem Text Colombia bonita"
   },

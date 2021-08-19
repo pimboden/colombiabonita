@@ -12,6 +12,17 @@ export default async () => {
   "sloganComp":{
     "text":"!Auténtica y mágica!"
   },
+  "cbFooterComp":{
+    "title1":"Siguenos en redes",
+    "altYoutubeLogo":"Logo de Youtube",
+    "altFbLogo":"Logo de Facebook",
+    "altInstLogo":"Logo de Instagram",
+    "title2":"Contáctanos",
+    "phone":"+57 311 421 31 87",
+    "altTel":"Imagen de un receptor telefónico",
+    "email":"info@colombiabonita.com",
+    "altEmail":"Imagen de un sobre"
+  },
   "mainLogoComp":{
     "alt":"Logo con un papagayo abstracto con los colores de colombia y el texto Colombia bonita"
   },
