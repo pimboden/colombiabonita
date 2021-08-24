@@ -1,7 +1,9 @@
 <template>
-  <div>
-    contact
-  </div>
+   <v-container class="content contact px-0 pt-0">
+
+     <cb-page-title translation-key="content.contact.title" />
+   </v-container>
+
 </template>
 
 <script>

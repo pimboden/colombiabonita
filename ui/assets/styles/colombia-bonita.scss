@@ -1,22 +1,44 @@
-@import '_colors.scss';
-@import '_langChanger.scss' ;
-@import '_mainNav.scss';
-@import '_footer.scss';
-@import '_carousel.scss';
+@import "_colors.scss";
+@import "_langChanger.scss";
+@import "_mainNav.scss";
+@import "_footer.scss";
+@import "_carousel.scss";
 
 body {
   background-color: $bg;
   color: $color;
 
-  .slogan{
+  .slogan {
     color: $color-slogan;
     font-weight: bold;
     font-style: italic;
     font-size: x-large;
   }
-  .main-logo{
+  .main-logo {
     max-width: 350px;
     max-height: 100px;
   }
-  
+  .splide__slide.is-visible.is-active {
+    border-color: $color-nav-bg !important;
+  }
+
+  .page-title {
+    h1 {
+      text-align: center;
+    }
+  }
+  .destination-selector {
+    .selector {
+      img{
+        width: 100%;
+        border-radius: 20px !important;
+      }
+      a {
+        text-align: center;
+        color: $color;
+        text-decoration: none;
+        font-size: x-large;
+      }
+    }
+  }
 }

@@ -28,7 +28,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/api.ts' },{ src: '~/plugins/axios.ts' }],
+  plugins: [{ src: '~/plugins/api.ts' },{ src: '~/plugins/axios.ts' }, {src: '~/plugins/splide.client.js', ssr:false}],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

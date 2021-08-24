@@ -1,0 +1,12 @@
+[
+  {"src":"p1.jpg", "thumbnail":"p1_th.jpg", "alt":"content.gallery.prado.gallery.altP1"},
+  {"src":"p2.jpg", "thumbnail":"p2_th.jpg", "alt":"content.gallery.prado.gallery.altP2"},
+  {"src":"p3.jpg", "thumbnail":"p3_th.jpg", "alt":"content.gallery.prado.gallery.altP3"},
+  {"src":"p4.jpg", "thumbnail":"p4_th.jpg", "alt":"content.gallery.prado.gallery.altP4"},
+  {"src":"p5.jpg", "thumbnail":"p5_th.jpg", "alt":"content.gallery.prado.gallery.altP5"},
+  {"src":"p6.jpg", "thumbnail":"p6_th.jpg", "alt":"content.gallery.prado.gallery.altP6"},
+  {"src":"p7.jpg", "thumbnail":"p7_th.jpg", "alt":"content.gallery.prado.gallery.altP7"},
+  {"src":"p8.jpg", "thumbnail":"p8_th.jpg", "alt":"content.gallery.prado.gallery.altP8"},
+  {"src":"p9.jpg", "thumbnail":"p9_th.jpg", "alt":"content.gallery.prado.gallery.altP9"},
+  {"src":"p10.jpg", "thumbnail":"p10_th.jpg", "alt":"content.gallery.prado.gallery.altP10"}
+ ]

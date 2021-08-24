@@ -1,7 +1,9 @@
 <template>
-  <div>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam fugit debitis cumque dolore perferendis consectetur nostrum quidem alias aliquid eum, eius dicta laboriosam, maxime mollitia veritatis beatae et dignissimos vero.
-  </div>
+   <v-container class="content aboutus px-0 pt-0">
+
+     <cb-page-title translation-key="content.aboutUs.title" />
+     <cb-body-text translation-key="content.aboutUs.text1" />
+   </v-container>
 </template>
 
 <script>

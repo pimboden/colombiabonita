@@ -85,6 +85,7 @@
 
 <script>
 export default {
+  name:'MainNav',
   data: () => ({
     navItems: [],
     drawer: false,
@@ -128,7 +129,7 @@ export default {
             textKey: 'navitems.linkGalleryStaMarta',
             to: this.localePath({
               name: 'gallery-finca',
-              params: { finca: 'StaMarta' },
+              params: { finca: 'stamarta' },
             }),
           },
         ],

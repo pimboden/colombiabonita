@@ -1,41 +1,54 @@
 <template>
-  <v-carousel hide-delimiters class="cb-carousel" height="300">
-      <v-carousel-item v-if="items.length >0"
-        v-for="(item,i) in items"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
-    </v-carousel>
+  <v-row class="carousel">
+    <v-col cols="12" class="pt-0">
+      <v-carousel
+        v-if="items.length > 0"
+        hide-delimiters
+        class="cb-carousel"
+        height="300"
+      >
+        <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
+        </v-carousel-item>
+      </v-carousel>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 export default {
- props:{
-   folder: String,
-   filenames: Array
- },
- data (){
-   return {
-     items:[]
-   }
- },
- mounted(){
-   const imageDir ="/carousels/"+this.folder+'/'
-   this.importAll(imageDir)
- },
-   methods: {
-    importAll(imageDir) {
-      const allItems = []
-      this.filenames.forEach(filename => {
-        const img = { src : imageDir + filename}
-        allItems.push(img)
-      });
-      this.items = allItems;
+  name: 'CbCarousel',
+  props: {
+    file: {
+      type: String,
+      default: '',
+    } /* name of the json file undes /static/carousels */,
+    imgPath: {
+      type: String,
+      default: '',
+    } /* name of the image folder path under /static/carousels */,
+  },
+  data() {
+    return {
+      items: [],
     }
-  }
+  },
+
+  async mounted() {
+    const jsonFilePath = '/carousels/' + this.file
+    await this.loadImages(jsonFilePath)
+  },
+  methods: {
+    async loadImages(jsonFilePath) {
+      const allItems = []
+      const homeCarousel = await this.$axios.$get(jsonFilePath)
+      homeCarousel.forEach((element) => {
+        const img = { src: '/carousels/' + this.imgPath + '/' + element }
+        allItems.push(img)
+      })
+      this.items = allItems
+    },
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

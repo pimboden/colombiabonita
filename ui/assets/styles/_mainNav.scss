@@ -1,28 +1,42 @@
-.main-nav{
-
+.main-nav {
   .theme--dark.v-toolbar.v-sheet,
-  .theme--light.v-toolbar.v-sheet{
+  .theme--light.v-toolbar.v-sheet {
     background-color: $color-nav-bg;
   }
   .theme--dark.v-btn,
-  .theme--light.v-btn{
+  .theme--light.v-btn {
     color: $color-nav-fg;
   }
 
-  .nav-item{
-    .v-btn:not(.v-btn--round).v-size--default{
+  .nav-item {
+    .v-btn:not(.v-btn--round).v-size--default {
       height: 4rem;
     }
   }
-  .navspacer{
+  .navspacer {
     width: 1px;
     border: 1px solid $color-nav-fg;
   }
-  .subheader{
+  .subheader {
     font-size: 1rem;
-
   }
-  .child-item{
+  .child-item {
     padding-left: 10px;
+  }
+}
+
+.v-menu__content {
+  background-color: $color-nav-bg;
+  color: $color-nav-fg;
+  .theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+  .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+  .theme--dark.v-list,
+  .theme--light.v-list {
+    background-color: $color-nav-bg;
+    color: $color-nav-fg;
+  }
+  .theme--dark.v-list-item:hover::before,
+  .theme--light.v-list-item:hover::before {
+    opacity: 0.08;
   }
 }
