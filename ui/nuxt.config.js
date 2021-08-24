@@ -1,9 +1,37 @@
 import colors from 'vuetify/es5/util/colors'
+import * as path from 'path'
+const debugYellow = '\x1B[33m%s\x1B[0m'
+const debugHeader = '\x1B[32m%s\x1B[0m'
+
+console.log('')
+console.log(debugYellow, '============================================')
+console.log(debugYellow, '====== start building nuxt.config.js  ======')
+console.log(debugYellow, '============================================')
+// let's get filename with path separate because nuxt:dotenv config needs only the filename part
+const envFilename = `.env.${process.env.NODE_ENV}`
+const envPath = path.resolve(process.cwd(), envFilename)
+
+require('dotenv').config({ path: envPath })
+
+const debugOutput = [
+  { name: 'HOST_NAME', value: process.env.HOST_NAME },
+  { name: 'REST_API_URL', value: process.env.REST_API_URL },
+  { name: 'GMAPS_API_KEY', value: process.env.GMAPS_API_KEY },
+  { name: 'SHOW_DEBUG_INFO', value: process.env.SHOW_DEBUG_INFO === 'true' },
+  { name: 'ENV PATH', value: envPath }
+]
+console.log(debugHeader, '\nenv variables & configurations:')
+console.table(debugOutput)
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  env: {
+    HOST_NAME: process.env.HOST_NAME,
+    REST_API_URL: process.env.REST_API_URL,
+    GMAPS_API_KEY: process.env.GMAPS_API_KEY,
+    SHOW_DEBUG_INFO: process.env.SHOW_DEBUG_INFO
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - colombia-bonita',

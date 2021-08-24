@@ -34,8 +34,8 @@ export default async () => {
       altEmail: 'Bild eines Briefumschlags',
     },
     destSelectorComp:{
-      coveñasAlt: "Das Meer von coveñas",
-      coveñasCaption: "Coveñas",
+      covenasAlt: "Das Meer von coveñas",
+      covenasCaption: "Coveñas",
       pradoAlt: "Foto des Prado-Aras",
       pradoCaption: "Prado",
       stamartaAlt: "Hängematte in Santa Marta",
@@ -72,7 +72,7 @@ export default async () => {
       },
       destinations: {
         title: 'Zielorte',
-        coveñas: {
+        covenas: {
           title: 'Coveñas'
         },
         prado: {
@@ -83,7 +83,7 @@ export default async () => {
         }
       },
       gallery: {
-        coveñas: {
+        covenas: {
           title: 'Coveñas in Bilder',
           gallery: {
             altP1: 'Beschreibung Bild 1',

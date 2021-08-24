@@ -11,7 +11,7 @@
           :key="navItem.textKey"
         >
           <template v-if="navItem.childs.length == 0">
-            <v-btn text :to="navItem.to" exact>
+            <v-btn text :to="localePath(navItem.to)" exact>
               {{ $t(navItem.textKey) }}
             </v-btn>
             <nav-spacer v-if="navItemIndex < navItems.length - 1" />
@@ -37,7 +37,7 @@
                   v-for="childItem in navItem.childs"
                   :key="childItem.textKey"
                   router
-                  :to="childItem.to"
+                  :to="localePath(childItem.to)"
                 >
                   <v-list-item-action>
                     <v-list-item-title
@@ -61,7 +61,7 @@
             <v-list-item
               v-for="(childItem, childIndex) in navItem.childs"
               :key="childItem.textKey + '_drawer_' +childIndex.toString()" 
-              :to="childItem.to"
+              :to="localePath(childItem.to)"
               router
               exact
             >
@@ -71,7 +71,7 @@
             </v-list-item>
           </template>
           <template v-else>
-            <v-list-item :key="navItem.textKey" :to="navItem.to" router exact>
+            <v-list-item :key="navItem.textKey" :to="localePath(navItem.to)" router exact>
               <v-list-item-content>
                 <v-list-item-title v-text="$t(navItem.textKey)" />
               </v-list-item-content>
@@ -94,17 +94,17 @@ export default {
     this.navItems = [
       {
         textKey: 'navitems.link1',
-        to: this.localePath('index'),
+        to: 'index',
         childs: [],
       },
       {
         textKey: 'navitems.link2',
-        to: this.localePath('aboutus'),
+        to: 'aboutus',
         childs: [],
       },
       {
         textKey: 'navitems.link3',
-        to: this.localePath('destinations'),
+        to: 'destinations',
         childs: [],
       },
       {
@@ -113,24 +113,24 @@ export default {
         childs: [
           {
             textKey: 'navitems.linkGalleryPrado',
-            to: this.localePath({
+            to: {
               name: 'gallery-finca',
               params: { finca: 'prado' },
-            }),
+            },
           },
           {
             textKey: 'navitems.linkGalleryCove',
-            to: this.localePath({
+            to: {
               name: 'gallery-finca',
-              params: { finca: 'coveñas' },
-            }),
+              params: { finca: 'covenas' },
+            },
           },
           {
             textKey: 'navitems.linkGalleryStaMarta',
-            to: this.localePath({
+            to: {
               name: 'gallery-finca',
               params: { finca: 'stamarta' },
-            }),
+            },
           },
         ],
       },
@@ -140,30 +140,30 @@ export default {
         childs: [
           {
             textKey: 'navitems.linkPricePrado',
-            to: this.localePath({
+            to: {
               name: 'price-finca',
               params: { finca: 'prado' },
-            }),
+            },
           },
           {
             textKey: 'navitems.linkPriceCove',
-            to: this.localePath({
+            to: {
               name: 'price-finca',
-              params: { finca: 'coveñas' },
-            }),
+              params: { finca: 'covenas' },
+            },
           },
           {
             textKey: 'navitems.linkPriceStaMarta',
-            to: this.localePath({
+            to: {
               name: 'price-finca',
               params: { finca: 'StaMarta' },
-            }),
+            },
           },
         ],
       },
       {
         textKey: 'navitems.link6',
-        to: this.localePath('contact'),
+        to: 'contact',
         childs: [],
       },
     ]

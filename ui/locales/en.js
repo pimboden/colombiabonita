@@ -34,8 +34,8 @@ export default async () => {
       altEmail: 'Image of an envelope',
     },
     destSelectorComp:{
-      coveñasAlt: "The sea at coveñas",
-      coveñasCaption: "Coveñas",
+      covenasAlt: "The sea at coveñas",
+      covenasCaption: "Coveñas",
       pradoAlt: "Photo of Prado's macaw",
       pradoCaption: "Prado",
       stamartaAlt: "Hammock in Santa Marta",
@@ -73,7 +73,7 @@ export default async () => {
       },
       destinations: {
         title: 'Destinations',
-        coveñas: {
+        covenas: {
           title: 'Coveñas'
         },
         prado: {
@@ -84,7 +84,7 @@ export default async () => {
         }
       },
       gallery: {
-        coveñas: {
+        covenas: {
           title: 'Images of Coveñas',
           gallery: {
             altP1: 'Description image 1',

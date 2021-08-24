@@ -16,11 +16,11 @@ export default {
   mounted() {
     this.allItems = [
       {
-        src: '/assets/icons/coveñasSelector.png',
-        alt: 'destSelectorComp.coveñasAlt',
-        caption: 'destSelectorComp.coveñasCaption',
+        src: '/assets/icons/covenasSelector.png',
+        alt: 'destSelectorComp.covenasAlt',
+        caption: 'destSelectorComp.covenasCaption',
         path: 'destinations',
-        finca: 'coveñas',
+        finca: 'covenas',
       },{
         src: '/assets/icons/pradoSelector.png',
         alt: 'destSelectorComp.pradoAlt',

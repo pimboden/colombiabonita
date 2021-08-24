@@ -34,8 +34,8 @@ export default async () => {
       altEmail: 'Imagen de un sobre',
     },
     destSelectorComp:{
-      coveñasAlt: "Foto del mar de coveñas",
-      coveñasCaption: "Coveñas",
+      covenasAlt: "Foto del mar de coveñas",
+      covenasCaption: "Coveñas",
       pradoAlt: "Foto de la guacamaya del prado",
       pradoCaption: "Prado",
       stamartaAlt: "Foto de la hamaca en Sta. Marta",
@@ -72,7 +72,7 @@ export default async () => {
       },
       destinations: {
         title: 'Destinos',
-        coveñas: {
+        covenas: {
           title: 'Coveñas'
         },
         prado: {
@@ -83,7 +83,7 @@ export default async () => {
         }
       },
       gallery: {
-        coveñas: {
+        covenas: {
           title: 'Imágenes de Coveñas',
           gallery: {
             altP1: 'Descrpcion imagen 1',
