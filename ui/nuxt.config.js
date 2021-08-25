@@ -85,7 +85,11 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    ['nuxt-gmaps', {
+      key: process.env.GMAPS_API_KEY
+    }
+    ]
   ],
   i18n: {
     strategy: 'prefix',

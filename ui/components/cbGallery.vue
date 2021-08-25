@@ -83,13 +83,13 @@ export default {
   },
 
   async mounted() {
-    const jsonFilePath = process.env.HOST_NAME+'/galleries/' + this.file
+    const jsonFilePath = process.env.HOST_NAME+'/assets/galleries/' + this.file
     await this.loadImages(jsonFilePath)
     this.$refs.primary.sync(this.$refs.secondary.splide)
   },
   methods: {
     async loadImages(jsonFilePath) {
-      const baseImagePath = process.env.HOST_NAME+'/galleries/' + this.imgPath + '/'
+      const baseImagePath = process.env.HOST_NAME+'/assets/galleries/' + this.imgPath + '/'
       const allItems = []
       const images = await this.$axios.$get(jsonFilePath)
       images.forEach((image) => {

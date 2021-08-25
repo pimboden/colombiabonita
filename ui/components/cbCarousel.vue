@@ -34,7 +34,7 @@ export default {
   },
 
   async mounted() {
-    const jsonFilePath = process.env.HOST_NAME+'/carousels/' + this.file
+    const jsonFilePath = process.env.HOST_NAME+'/assets/carousels/' + this.file
     await this.loadImages(jsonFilePath)
   },
   methods: {
@@ -42,7 +42,7 @@ export default {
       const allItems = []
       const homeCarousel = await this.$axios.$get(jsonFilePath)
       homeCarousel.forEach((element) => {
-        const img = { src: process.env.HOST_NAME+'/carousels/' + this.imgPath + '/' + element }
+        const img = { src: process.env.HOST_NAME+'/assets/carousels/' + this.imgPath + '/' + element }
         allItems.push(img)
       })
       this.items = allItems
