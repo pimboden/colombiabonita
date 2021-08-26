@@ -105,58 +105,67 @@ export default {
       {
         textKey: 'navitems.link3',
         to: 'destinations',
-        childs: [],
-      },
-      {
-        textKey: 'navitems.link4',
-        to: null,
         childs: [
           {
-            textKey: 'navitems.linkGalleryPrado',
+            textKey: 'navitems.linkDestinationpradolu',
             to: {
-              name: 'gallery-finca',
-              params: { finca: 'prado' },
+              name: 'destinations-finca',
+              params: { finca: 'pradolu' },
             },
           },
           {
-            textKey: 'navitems.linkGalleryCove',
+            textKey: 'navitems.linkDestinationpradonat',
             to: {
-              name: 'gallery-finca',
+              name: 'destinations-finca',
+              params: { finca: 'pradonat' },
+            },
+          },
+          {
+            textKey: 'navitems.linkDestinationcove',
+            to: {
+              name: 'destinations-finca',
               params: { finca: 'covenas' },
             },
           },
           {
-            textKey: 'navitems.linkGalleryStaMarta',
+            textKey: 'navitems.linkDestinationstamarta',
             to: {
-              name: 'gallery-finca',
+              name: 'destinations-finca',
               params: { finca: 'stamarta' },
             },
           },
         ],
       },
       {
-        textKey: 'navitems.link5',
+        textKey: 'navitems.link4',
         to: null,
         childs: [
           {
-            textKey: 'navitems.linkPricePrado',
+            textKey: 'navitems.linkGallerypradolu',
             to: {
-              name: 'price-finca',
-              params: { finca: 'prado' },
+              name: 'gallery-finca',
+              params: { finca: 'pradolu' },
             },
           },
           {
-            textKey: 'navitems.linkPriceCove',
+            textKey: 'navitems.linkGallerypradonat',
             to: {
-              name: 'price-finca',
+              name: 'gallery-finca',
+              params: { finca: 'pradonat' },
+            },
+          },
+          {
+            textKey: 'navitems.linkGallerycove',
+            to: {
+              name: 'gallery-finca',
               params: { finca: 'covenas' },
             },
           },
           {
-            textKey: 'navitems.linkPriceStaMarta',
+            textKey: 'navitems.linkGallerystamarta',
             to: {
-              name: 'price-finca',
-              params: { finca: 'StaMarta' },
+              name: 'gallery-finca',
+              params: { finca: 'stamarta' },
             },
           },
         ],

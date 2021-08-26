@@ -5,7 +5,7 @@
         v-if="items.length > 0"
         hide-delimiters
         class="cb-carousel"
-        height="300"
+        height="400"
       >
         <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
         </v-carousel-item>

@@ -9,10 +9,10 @@
             :to="localePath({ name: item.path})+'/'+ item.finca"
           >
             <img
-              :src="item.src"
-              :alt="$t(item.alt)"
+              :src="'/assets/icons/selector-'+item.finca+'.png'"
+              :alt="$t('destSelectorComp.'+item.finca+'Alt')"
              />
-              <figcaption>{{$t(item.caption)}}</figcaption></nuxt-link
+              <figcaption>{{$t('destSelectorComp.'+item.finca+'Caption')}}</figcaption></nuxt-link
         ></v-card>
     </v-col>
   </v-row>

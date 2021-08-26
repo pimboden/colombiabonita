@@ -75,12 +75,17 @@ export default {
     '@nuxtjs/color-mode',
     '@nuxtjs/svg'
   ],
+  recaptcha: {
+    siteKey: process.env.RECAPTCHA_SITE_KEY,
+    version: 3
+  },
   dateFns: {
     locales: ['es', 'de', 'enUS'],
     defaultLocale: 'es'
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/recaptcha',
     '@nuxtjs/i18n',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
@@ -159,6 +164,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+      "vee-validate/dist/rules"
+    ]    
   }
 }
 

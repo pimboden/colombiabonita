@@ -36,8 +36,10 @@ export default async () => {
     destSelectorComp:{
       covenasAlt: "Foto del mar de coveñas",
       covenasCaption: "Coveñas",
-      pradoAlt: "Foto de la guacamaya del prado",
-      pradoCaption: "Prado",
+      pradoluAlt: "Foto de la guacamaya del prado",
+      pradoluCaption: "Prado - Lucerna",
+      pradonatAlt: "Foto de la guacamaya del prado",
+      pradonatCaption: "Prado - Natalie",
       stamartaAlt: "Foto de la hamaca en Sta. Marta",
       stamartaCaption: "Sta. Marta"
     },
@@ -51,20 +53,35 @@ export default async () => {
       link4: 'Galería',
       link5: 'Tarifas',
       link6: 'Contacto',
-      linkPricePrado: 'Prado',
-      linkPricePradoNat: 'Natalie',
-      linkPricePradoLuz: 'Lucerna',
-      linkPriceCove: 'Coveñas',
-      linkPriceStaMarta: 'Sta. Marta',
-      linkGalleryPrado: 'Prado',
-      linkGalleryPradoNat: 'Natalie',
-      linkGalleryPradoLuz: 'Lucerna',
-      linkGalleryCove: 'Coveñas',
-      linkGalleryStaMarta: 'Sta. Marta',
+      linkDestinationpradonat: 'Prado - Natalie',
+      linkDestinationpradolu: 'Prado - Lucerna',
+      linkDestinationcove: 'Coveñas',
+      linkDestinationstamarta: 'Sta. Marta',
+      linkGallerypradonat: 'Prado - Natalie',
+      linkGallerypradolu: 'Prado - Lucerna',
+      linkGallerycove: 'Coveñas',
+      linkGallerystamarta: 'Sta. Marta',
+
     },
+    contact: {
+      form:{
+        completeName: "Nombre completo",
+        phone: "Número telefónico",
+        email: "Correo electrónico",
+        message: "Mensaje",
+        btnSend:"Enviar mensaje"
+      },
+      validators:{
+        completeName: "Por favor, escriba su nombre completo",
+        phone: "Por favor, escriba su número telefónico",
+        email: "Por favor, escriba su correo electrónico",
+        message: "Por favor, escriba un mesnaje ",
+      }
+    },
+
     content: {
       aboutUs: {
-        title: 'Quiene somos',
+        title: 'Quiene somos?',
         text1:'Español - <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>'
       },
       contact: {
@@ -82,12 +99,21 @@ export default async () => {
             address:"Salida Punta Bolivar, San Antero, Córdoba, Colombia"
           }
         },
-        prado: {
-          title: 'Prado',
-          text1:'Español - Prado - <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
+        pradolu: {
+          title: 'Prado finca Lucerna',
+          text1:'Español - Prado - Lucerna<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
           geoLocation:{
-            alt:'Imagen de finca en Prado',
+            alt:'Imagen de finca Lucernaen Prado',
             name:'Prado: finca "Lucerna"',
+            address:"Puerto Hidroprado, Tolima, Colombia"
+          }
+        },
+        pradonat: {
+          title: 'Prado finca Natalie',
+          text1:'Español - Prado - Natalie<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
+          geoLocation:{
+            alt:'Imagen de finca Natalie en Prado',
+            name:'Prado: finca "Natalie"',
             address:"Puerto Hidroprado, Tolima, Colombia"
           }
         },

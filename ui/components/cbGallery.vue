@@ -2,17 +2,22 @@
   <v-row class="gallery"
     ><v-col cols="12">
       <template v-if="slides.length > 0">
-        <splide ref="primary" :options="primaryOptions">
-          <splide-slide v-for="slide in slides" :key="slide.src">
-            <img :src="slide.src" :alt="slide.alt" />
-          </splide-slide>
-        </splide>
-
-        <splide ref="secondary" :options="secondaryOptions">
-          <splide-slide v-for="slide in slides" :key="slide.src">
-            <img :src="slide.thumbnail" :alt="slide.alt" />
-          </splide-slide>
-        </splide>
+        <v-row>
+          <v-col cols="12">
+            <splide ref="primary" :options="primaryOptions">
+              <splide-slide v-for="slide in slides" :key="slide.src">
+                <img :src="slide.src" :alt="slide.alt" />
+              </splide-slide>
+            </splide>
+          </v-col>
+          <v-col cols="12">
+            <splide ref="secondary" :options="secondaryOptions">
+              <splide-slide v-for="slide in slides" :key="slide.src">
+                <img :src="slide.thumbnail" :alt="$t(slide.alt)" />
+              </splide-slide>
+            </splide>
+          </v-col>
+        </v-row>
       </template> </v-col
   ></v-row>
 </template>
@@ -39,7 +44,7 @@ export default {
         perMove: 1,
         gap: '1rem',
         pagination: false,
-        fixedHeight: 400,
+        fixedHeight: 600,
         cover: true,
         arrows: true,
         i18n: {
@@ -83,21 +88,23 @@ export default {
   },
 
   async mounted() {
-    const jsonFilePath = process.env.HOST_NAME+'/assets/galleries/' + this.file
+    const jsonFilePath =
+      process.env.HOST_NAME + '/assets/galleries/' + this.file
     await this.loadImages(jsonFilePath)
     this.$refs.primary.sync(this.$refs.secondary.splide)
   },
   methods: {
     async loadImages(jsonFilePath) {
-      const baseImagePath = process.env.HOST_NAME+'/assets/galleries/' + this.imgPath + '/'
+      const baseImagePath =
+        process.env.HOST_NAME + '/assets/galleries/' + this.imgPath + '/'
       const allItems = []
       const images = await this.$axios.$get(jsonFilePath)
       images.forEach((image) => {
         const img = { src: baseImagePath + image.src }
         if (image.alt) {
-          img.alt = this.$t(image.alt)
+          img.alt = image.alt
         } else {
-          img.alt = this.$t('galleryComp.noAltProvided')
+          img.alt = 'galleryComp.noAltProvided'
         }
         if (image.thumbnail) {
           img.thumbnail = baseImagePath + image.thumbnail
