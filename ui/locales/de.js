@@ -29,9 +29,7 @@ export default async () => {
       altInstLogo: 'Instagram Logo',
       title2: 'Kontaktieren Sie uns',
       phone: '+57 311 421 31 87',
-      altTel: 'Bild eines Telefonhörers',
-      email: 'info@colombiabonita.com',
-      altEmail: 'Bild eines Briefumschlags',
+      contactForm: 'Kontaktformular',
     },
     destSelectorComp:{
       covenasAlt: "Das Meer von coveñas",

@@ -31,7 +31,7 @@
                 <a :href="'tel:' + $t('cbFooterComp.phone')" type="tel" class="contact-link tel">{{$t('cbFooterComp.phone')}}</a>
               </v-card>
               <v-card class="justify-center pa-2 footer-col-content" outlined tile>
-                <a :href="'mailto:'+ $t('cbFooterComp.email')" type="email" class="contact-link email">{{$t('cbFooterComp.email')}}</a>
+                <nuxt-link :to="localePath('contact')"class="contact-link email">{{$t('cbFooterComp.contactForm')}}</nuxt-link>
               </v-card>
             </v-card>
           </v-card>

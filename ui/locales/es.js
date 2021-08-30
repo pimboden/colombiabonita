@@ -29,9 +29,7 @@ export default async () => {
       altInstLogo: 'Logo de Instagram',
       title2: 'Contáctanos',
       phone: '+57 311 421 31 87',
-      altTel: 'Imagen de un receptor telefónico',
-      email: 'info@colombiabonita.com',
-      altEmail: 'Imagen de un sobre',
+      contactForm: 'Formulario de contacto',
     },
     destSelectorComp:{
       covenasAlt: "Foto del mar de coveñas",
@@ -48,7 +46,7 @@ export default async () => {
     },
     navitems: {
       link1: 'Inicio',
-      link2: 'Quienes somos',
+      link2: 'Quienes somos?',
       link3: 'Destinos',
       link4: 'Galería',
       link5: 'Tarifas',
@@ -91,12 +89,12 @@ export default async () => {
     content: {
       home:{
         title: 'Colombiabonita',
-        metaDesrciption: 'In colombiabonita bieten wir Ihnen vier außergewöhnliche Orte, einfach, aber mit allem Komfort, wo Sie mit Ihrer Familie oder Freunden die natürliche Schönheit Kolumbiens genießen können.',
+        metaDesrciption: 'En Colombiabonita mostramos la parte positiva de Colombia. Instalaciones originales con un alto estandar  ecológico y con buena comodidad para disfrutar de una exuberante naturaleza.',
       },
       aboutUs: {
-        title: 'Quiene somos?',
-        metaDesrciption: 'En colombiabonita ofrecemos cuatro lugares extraordinarios, sencillos, pero con todas las comodidades, en donde puede disfrutar con su familia o con sus amigos la belleza natural de Colombia',
-        text1:'Español - <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>'
+        title: 'Quienes somos?',
+        metaDesrciption: 'En Colombiabonita mostramos la parte positiva de Colombia. Instalaciones originales con un alto estandar  ecológico y con buena comodidad para disfrutar de una exuberante naturaleza ',
+        text1:'En Colombiabonita mostramos la parte positiva de Colombia. Instalaciones originales con un alto estandar  ecológico y con buena comodidad para disfrutar de una exuberante naturaleza y de la amabilidad de la gente que atiende nuestras instalaciones.  Nos esforzamos para que nuestros clientes puedan  gozar de un autentico descanso dentro de un entorno muy agradable rodeado de bellezas naturales.'
       },
       contact: {
         title: 'Contacto',
@@ -126,9 +124,9 @@ export default async () => {
           }
         },
         pradonat: {
-          title: 'Prado finca Natalie',
-          metaDesrciption: 'Prado. La finca Natalie ofrece....',
-          text1:'Español - Prado - Natalie<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
+          title: 'Finca Natalie en Prado',
+          metaDesrciption: 'Las instalaciones de la finca Natalie consisten en una casa principal, 2 bungalows y una zona de recreo.',
+          text1:'<p>La finca Natalie se encuentra en un brazo de la laguna del Prado denominado “El Caimán”, a 15 Minutos en bote del parqueadero.</p><p>Las instalaciones de la finca Natalie consisten en una casa principal con dos cuartos con dos camas dobles cada una y con un baño con ducha compartido. En el segundo piso se pueden albergar 6 personas en tres cuartos con dos camas sencillas cada uno, compartiendo dos baños con duchas.</p><p>Bordeado la quebrada propia hay un bungalow “Casa verde” con tres camas sencillas y un baño/ducha, y al borde del lago el bungalow “La Marina” con 2 camas dobles y una cama sencilla, con baño/ducha al aire libre. Capacidad total para 22 personas.</p><p>La zona de recreo consiste del espacio cubierto “El casino” en donde encuentra una mesa de Ping-Pong, un juego de dardos y una pista de mini-tejo y un juego de sillones para descanso. Para las personas que no pueden vivir sin TV, hemos instalado una pequeña pantalla conectada a la red de Direct-TV. En la finca también encuentra una cancha para badminton y una tirolesa. La piscina profunda invita a saltos desde las rocas y a juegos de equilibrio.</p><h2 class="mb-2">Servicios incluidos:</h2><p>Transporte de ida y vuelta con canoa propia, con todas las medidas de seguridad. Refresco de bienvenida. Aseo de las habitaciones. Servicio de cocina. Limpieza final incluyendo lavada de ropa de cama.</p><h2 class="mb-2">Servicios para contratar*:</h2><ul class="services"><li>Desayuno, Almuerzo y Comida de Menú único diarios,previamente escogido.</li><li>Venta de Gaseosas, Cerveza y Mecatos</li><li>Esquí acuático, aventura en donut y en gusano de 3 puestos.</li><li>Alquiler de Standup Paddle y de 2 kayak doble.</li></ul> <small class="mt-3 d-block">*solicite información detallada y precios por separado</small>',
           geoLocation:{
             alt:'Imagen de finca Natalie en Prado',
             name:'Prado: finca "Natalie"',
