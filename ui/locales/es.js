@@ -69,7 +69,16 @@ export default async () => {
         phone: "Número telefónico",
         email: "Correo electrónico",
         message: "Mensaje",
-        btnSend:"Enviar mensaje"
+        btnSend:"Enviar mensaje",
+        reason: "Motivo de contacto",
+        reasons:{
+          cotizacion: "Cotización",
+          reclamo: "Reclamo",
+          otro: "Otra"
+        },
+        error:"Lamentablemente, su solicitud de contacto no pudo ser enviada.<br> Por favor, inténtelo más tarde.",
+        success:"Su solicitud de contacto ha sido enviada.<br>La procesaremos lo antes posible"
+
       },
       validators:{
         completeName: "Por favor, escriba su nombre completo",
@@ -80,18 +89,25 @@ export default async () => {
     },
 
     content: {
+      home:{
+        title: 'Colombiabonita',
+        metaDesrciption: 'In colombiabonita bieten wir Ihnen vier außergewöhnliche Orte, einfach, aber mit allem Komfort, wo Sie mit Ihrer Familie oder Freunden die natürliche Schönheit Kolumbiens genießen können.',
+      },
       aboutUs: {
         title: 'Quiene somos?',
+        metaDesrciption: 'En colombiabonita ofrecemos cuatro lugares extraordinarios, sencillos, pero con todas las comodidades, en donde puede disfrutar con su familia o con sus amigos la belleza natural de Colombia',
         text1:'Español - <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>'
       },
       contact: {
         title: 'Contacto',
+        metaDesrciption: 'Cotice con nosotros, o haga un comentario.',
       },
       destinations: {
         title: 'Destinos',
         gmapUrlText: 'Abrir con Google maps',
         covenas: {
           title: 'Coveñas',
+          metaDesrciption: 'Coveñas. Una cabaña sencilla a dos minutos de la playa',
           text1:'Español - Coveñas - <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
           geoLocation:{
             alt:'Imagen de cabaña en Coveñas',
@@ -101,6 +117,7 @@ export default async () => {
         },
         pradolu: {
           title: 'Prado finca Lucerna',
+          metaDesrciption: 'Prado. La finca Lucerna ofrece ...',
           text1:'Español - Prado - Lucerna<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
           geoLocation:{
             alt:'Imagen de finca Lucernaen Prado',
@@ -110,6 +127,7 @@ export default async () => {
         },
         pradonat: {
           title: 'Prado finca Natalie',
+          metaDesrciption: 'Prado. La finca Natalie ofrece....',
           text1:'Español - Prado - Natalie<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
           geoLocation:{
             alt:'Imagen de finca Natalie en Prado',
@@ -119,9 +137,10 @@ export default async () => {
         },
         stamarta: {
           title: 'Santa Marta',
+          metaDesrciption: 'El apto, en Sta Marta....',
           text1:'Español - Santa Marta - <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li></ul><pre><code>#header h1 a { display: block; width: 300px; height: 80px;}</code></pre>',
           geoLocation:{
-            alt:'Vista de Santa MArta',
+            alt:'Vista de Santa Marta',
             name:'Apto en Bahia Linda',
             address:"Bahia linda, Santa Marta, Magdalena, Colombia"
           }
@@ -130,6 +149,7 @@ export default async () => {
       gallery: {
         covenas: {
           title: 'Imágenes de Coveñas',
+          metaDesrciption: 'Galería de imágenes de la cabaña en Coveñas',
           gallery: {
             altP1: 'Descrpcion imagen 1',
             altP2: 'Descrpcion imagen 2',
@@ -143,8 +163,25 @@ export default async () => {
             altP10: 'Descrpcion imagen 10',
           },
         },
-        prado: {
-          title: 'Imágenes de Prado',
+        pradolu: {
+          title: 'Imágenes de la finca Lucerna en Prado ',
+          metaDesrciption: 'Galería de imágenes de la finca Lucerna',
+          gallery: {
+            altP1: 'Descrpcion imagen 1',
+            altP2: 'Descrpcion imagen 2',
+            altP3: 'Descrpcion imagen 3',
+            altP4: 'Descrpcion imagen 4',
+            altP5: 'Descrpcion imagen 5',
+            altP6: 'Descrpcion imagen 6',
+            altP7: 'Descrpcion imagen 7',
+            altP8: 'Descrpcion imagen 8',
+            altP9: 'Descrpcion imagen 9',
+            altP10: 'Descrpcion imagen 10',
+          },
+        },
+        pradonat: {
+          title: 'Imágenes de la finca Natalie en Prado',
+          metaDesrciption: 'Galería de imágenes de la finca Natalie',
           gallery: {
             altP1: 'Descrpcion imagen 1',
             altP2: 'Descrpcion imagen 2',
@@ -160,6 +197,7 @@ export default async () => {
         },
         stamarta: {
           title: 'Imágenes de Sta. Marta',
+          metaDesrciption: 'Galería de imágenes del apartamento en Sta. Marta',
           gallery: {
             altP1: 'Descrpcion imagen 1',
             altP2: 'Descrpcion imagen 2',

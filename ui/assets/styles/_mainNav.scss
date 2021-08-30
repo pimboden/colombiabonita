@@ -26,17 +26,28 @@
 }
 
 .v-menu__content {
-  background-color: $color-nav-bg;
-  color: $color-nav-fg;
-  .theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
-  .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
-  .theme--dark.v-list,
-  .theme--light.v-list {
+  .nav-menu-list.v-list.v-sheet.theme--dark,
+  .nav-menu-list.v-list.v-sheet.theme--light {
+    background-color: $color-nav-bg;
+    color: $color-nav-fg;
+    .child-spacer {
+      border: thin $color-nav-fg solid;
+      height: 1px;
+      width: calc(100% - 20px);
+      position: absolute;
+      top: 39px;
+      left: 10px;
+    }
+  }
+  .nav-menu-child.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+  .nav-menu-child.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+  .nav-menu-child.theme--dark.v-list,
+  .nav-menu-child.theme--light.v-list {
     background-color: $color-nav-bg;
     color: $color-nav-fg;
   }
-  .theme--dark.v-list-item:hover::before,
-  .theme--light.v-list-item:hover::before {
+  .nav-menu-child.theme--dark.v-list-item:hover::before,
+  .nav-menu-child.theme--light.v-list-item:hover::before {
     opacity: 0.08;
   }
 }

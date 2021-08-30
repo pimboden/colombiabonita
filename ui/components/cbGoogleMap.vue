@@ -1,13 +1,14 @@
 <template>
   <v-row class="carousel">
     <v-col v-if="geoLocation" cols="12" class="pt-0">
+    <cb-spinner v-if="$fetchState.pending" />
     <GMap
       ref="gMap"
       language="en"
       :center="{ lat: geoLocation.lat, lng: geoLocation.lng }"
       :options="{ fullscreenControl: false, mapTypeId: 'hybrid'}"
       
-      :zoom="10"
+      :zoom="15"
     >
       <GMapMarker
         :position="{ lat: geoLocation.lat, lng: geoLocation.lng }"
@@ -48,7 +49,7 @@ export default {
     }
   },
 
-  async mounted() {
+  async fetch() {
     const jsonFilePath = process.env.HOST_NAME+'/assets/maps/' + this.file
     await this.loadGeoLocation(jsonFilePath)
   },

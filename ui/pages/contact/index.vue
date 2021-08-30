@@ -1,8 +1,7 @@
 <template>
   <v-container class="content contact px-0 pt-0">
     <cb-page-title translation-key="content.contact.title" />
-
-    <v-row justify="center" no-gutters>
+    <v-row v-if="!showResult" justify="center" no-gutters>
       <v-col cols="7">
         <ValidationObserver ref="obs" v-slot="{ validated }">
           <v-container>
@@ -26,10 +25,7 @@
                         ? $t('contact.validators.completeName')
                         : null
                     "
-                    :success="
-                      validated &&
-                      valid
-                    "
+                    :success="validated && valid"
                   />
                 </ValidationProvider>
               </v-col>
@@ -54,15 +50,12 @@
                         ? $t('contact.validators.phone')
                         : null
                     "
-                    :success="
-                      validated &&
-                      valid
-                    "
+                    :success="validated && valid"
                   />
                 </ValidationProvider>
               </v-col>
             </v-row>
-              <v-row>
+            <v-row>
               <v-col cols="12" align="center" justify="end">
                 <ValidationProvider
                   v-slot="{ valid }"
@@ -82,15 +75,27 @@
                         ? $t('contact.validators.email')
                         : null
                     "
-                    :success="
-                      validated &&
-                      valid
-                    "
+                    :success="validated && valid"
                   />
                 </ValidationProvider>
               </v-col>
             </v-row>
-                          <v-row>
+            <v-row>
+              <v-col cols="12" align="center" justify="end">
+                <v-select
+                  v-model="reason"
+                  :items="reasons"
+                  filled
+                  prepend-icon="mdi-message-question-outline"
+                  item-text="translatedValue"
+                  item-value="emailValue"
+                  hide-details
+                  :menu-props="{ top: false, offsetY: true }"
+                  :label="$t('contact.form.reason')"
+                ></v-select>
+              </v-col>
+            </v-row>
+            <v-row>
               <v-col cols="12" align="center" justify="end">
                 <ValidationProvider
                   v-slot="{ valid }"
@@ -110,10 +115,7 @@
                         ? $t('contact.validators.message')
                         : null
                     "
-                    :success="
-                      validated &&
-                      valid
-                    "
+                    :success="validated && valid"
                   />
                 </ValidationProvider>
               </v-col>
@@ -148,7 +150,20 @@
               </v-col>
             </v-row>
           </v-container>
-          </ValidationObserver>
+        </ValidationObserver>
+      </v-col>
+    </v-row>
+    <v-row v-else justify="center">
+      <v-col cols="4">
+        <v-alert outlined prominent :type="error ? 'error' : 'success'">
+          <slot
+            ><span
+              v-html="
+                error ? $t('contact.form.error') : $t('contact.form.success')
+              "
+            ></span
+          ></slot>
+        </v-alert>
       </v-col>
     </v-row>
   </v-container>
@@ -166,33 +181,91 @@ export default {
   },
   data() {
     return {
+      error: false,
+      sent: false,
       isSubmiting: false,
       completeName: '',
-      phone:'',
-      email:'',
-      message:''
+      phone: '',
+      email: '',
+      message: '',
+      reason: 'Cotizacion',
+      reasons: [
+        {
+          emailValue: 'Cotizacion',
+          translatedValue: this.$t('contact.form.reasons.cotizacion'),
+        },
+        {
+          emailValue: 'Reclamo',
+          translatedValue: this.$t('contact.form.reasons.reclamo'),
+        },
+        {
+          emailValue: 'Otro',
+          translatedValue: this.$t('contact.form.reasons.otro'),
+        },
+      ],
     }
+  },
+  head() {
+    return {
+      title: this.$t('content.contact.title'),
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('content.contact.metaDesrciption'),
+        },
+      ],
+    }
+  },
+  computed: {
+    showResult() {
+      return !this.isSubmiting && this.sent
+    },
   },
   created() {
     this.$recaptcha.language = this.$root.$i18n.locale
     this.$root.$on('language-changed', this.languageChanged)
   },
   methods: {
-    languageChanged(code){
+    languageChanged(code) {
       this.$recaptcha.language = code
     },
     async submit() {
       this.isSubmiting = true
-      debugger
       const isValid = await this.$refs.obs.validate()
       if (isValid) {
-        window.setTimeout(function () {
-          this.isSubmiting = false
-        }, 2200)
-      } else {
-        window.setTimeout(function () {
-          this.isSubmiting = false
-        },5000)
+        const data = {
+          service_id: process.env.EMAILJS_SERVICE_ID,
+          template_id: process.env.EMAILJS_TEMPLATE_ID,
+          user_id: process.env.EMAILJS_UID,
+          template_params: {
+            completeName: this.completeName,
+            phone: this.phone,
+            email: this.email,
+            reason: this.reason,
+            message: this.message,
+            language: this.$root.$i18n.locale,
+          },
+        }
+        try {
+          const response = await this.$axios.$post(
+            process.env.EMAILJS_API_SEND,
+            data
+          )
+          if (response === 'OK') {
+            this.error = false
+          } else {
+            this.error = true
+          }
+        } catch {
+          this.error = true
+        }
+        this.sent = true
+        this.isSubmiting = false
+      }
+      else{
+        this.isSubmiting = false
       }
     },
     recaptachaError(...args) {

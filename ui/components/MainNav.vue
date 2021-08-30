@@ -21,29 +21,30 @@
               open-on-hover
               offset-y
               transition="slide-x-transition"
-              bottom
-              right
+              class="nav-menu"
             >
               <template #activator="{ on, attrs }">
-                <div class="nav-item">
-                  <v-btn text v-bind="attrs" v-on="on">
+                <div class="nav-menu-item">
+                  <v-btn text v-bind="attrs" :class="isInCurrentPath(navItem.to) ? 'v-btn--active':''" v-on="on">
                     {{ $t(navItem.textKey) }}
                   </v-btn>
                   <nav-spacer />
                 </div>
               </template>
-              <v-list dense>
+              <v-list dense class="nav-menu-list">
                 <v-list-item
-                  v-for="childItem in navItem.childs"
+                  v-for="(childItem, n) in navItem.childs"
                   :key="childItem.textKey"
                   router
                   :to="localePath(childItem.to)"
+                  class="nav-menu-child"
                 >
                   <v-list-item-action>
                     <v-list-item-title
                       >{{ $t(childItem.textKey) }}
                     </v-list-item-title>
                   </v-list-item-action>
+                  <div v-if="n < navItem.childs.length -1" class="child-spacer"/>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -138,7 +139,7 @@ export default {
       },
       {
         textKey: 'navitems.link4',
-        to: null,
+        to: 'gallery',
         childs: [
           {
             textKey: 'navitems.linkGallerypradolu',
@@ -177,5 +178,11 @@ export default {
       },
     ]
   },
+  methods:{
+     isInCurrentPath( path) {
+      const res = this.$router.currentRoute.name.startsWith(path+='-')
+      return res
+    }
+  }
 }
 </script>

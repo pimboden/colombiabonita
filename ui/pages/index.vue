@@ -2,7 +2,7 @@
   <v-container class="content home px-0 pt-0">
     <cb-carousel file="home.json" img-path="home"></cb-carousel>
     <cb-destinations-selection :items="allItems"/>
-    <cb-youtube-video src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"/>
+    <cb-youtube-video src="https://www.youtube.com/embed/xzy4umDtA88?autoplay=1&mute=1"/>
   </v-container>
 </template>
 
@@ -13,19 +13,32 @@ export default {
       allItems: [],
     }
   },
+  head() {
+    return {
+      title: this.$t('content.home.title'),
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('content.home.metaDesrciption'),
+        },
+      ],
+    }
+  },
   mounted() {
     this.allItems =[
       {
-        path: 'destinations',
+        path: 'destinations-finca',
         finca: 'covenas',
       },{
-        path: 'destinations',
+        path: 'destinations-finca',
         finca: 'pradolu',
       },{
-        path: 'destinations',
+        path: 'destinations-finca',
         finca: 'pradonat',
       },{
-        path: 'destinations',
+        path: 'destinations-finca',
         finca: 'stamarta',
       },
     ]

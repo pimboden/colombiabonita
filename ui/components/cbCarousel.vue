@@ -1,6 +1,7 @@
 <template>
   <v-row class="carousel">
     <v-col cols="12" class="pt-0">
+      <cb-spinner v-if="$fetchState.pending" />
       <v-carousel
         v-if="items.length > 0"
         hide-delimiters
@@ -33,9 +34,9 @@ export default {
     }
   },
 
-  async mounted() {
+  async fetch() {
     const jsonFilePath = process.env.HOST_NAME+'/assets/carousels/' + this.file
-    await this.loadImages(jsonFilePath)
+    this.items= await this.loadImages(jsonFilePath)
   },
   methods: {
     async loadImages(jsonFilePath) {
@@ -45,7 +46,7 @@ export default {
         const img = { src: process.env.HOST_NAME+'/assets/carousels/' + this.imgPath + '/' + element }
         allItems.push(img)
       })
-      this.items = allItems
+      return allItems
     },
   },
 }

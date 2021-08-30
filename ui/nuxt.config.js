@@ -30,6 +30,10 @@ export default {
     HOST_NAME: process.env.HOST_NAME,
     REST_API_URL: process.env.REST_API_URL,
     GMAPS_API_KEY: process.env.GMAPS_API_KEY,
+    EMAILJS_SERVICE_ID:process.env.EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID:process.env.EMAILJS_TEMPLATE_ID,
+    EMAILJS_UID:process.env.EMAILJS_UID,
+    EMAILJS_API_SEND:process.env.EMAILJS_API_SEND,
     SHOW_DEBUG_INFO: process.env.SHOW_DEBUG_INFO
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -42,7 +46,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'google-site-verification', name: 'google-site-verification', content: 'O4XLIRPqbSOzBL6zKy0Z7dJkCBiLUnD2spLgW7g-uKY' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -59,14 +63,13 @@ export default {
   plugins: [{ src: '~/plugins/api.ts' },{ src: '~/plugins/axios.ts' }, {src: '~/plugins/splide.client.js', ssr:false}],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://composition-api.nuxtjs.org/getting-started/setup
     '@nuxtjs/composition-api/module',// https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    ['@nuxtjs/vuetify',{treeShake: true}],
     // https://github.com/nuxt-community/dotenv-module
     ['@nuxtjs/dotenv', { filename: '.env.dev' }],
     // https://github.com/nuxt-community/date-fns-module#readme
@@ -164,6 +167,19 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    analyze:true,
+    extractCSS: true,
+    "html.minify":{
+      collapseBooleanAttributes: true,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      trimCustomFragments: true,
+      useShortDoctype: true
+    },
     transpile: [
       "vee-validate/dist/rules"
     ]    

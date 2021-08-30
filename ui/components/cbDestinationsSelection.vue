@@ -6,8 +6,7 @@
           elevation="0"
           >
           <nuxt-link
-            :to="localePath({ name: item.path})+'/'+ item.finca"
-          >
+            :to="localePath( { name: item.path, params: { finca: item.finca }})">
             <img
               :src="'/assets/icons/selector-'+item.finca+'.png'"
               :alt="$t('destSelectorComp.'+item.finca+'Alt')"

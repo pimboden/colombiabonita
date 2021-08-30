@@ -1,6 +1,7 @@
 <template>
   <v-row class="gallery"
     ><v-col cols="12">
+      <cb-spinner v-if="$fetchState.pending" />
       <template v-if="slides.length > 0">
         <v-row>
           <v-col cols="12">
@@ -87,12 +88,13 @@ export default {
     }
   },
 
-  async mounted() {
+  async fetch() {
     const jsonFilePath =
       process.env.HOST_NAME + '/assets/galleries/' + this.file
     await this.loadImages(jsonFilePath)
     this.$refs.primary.sync(this.$refs.secondary.splide)
   },
+  fetchOnServer: false,
   methods: {
     async loadImages(jsonFilePath) {
       const baseImagePath =

@@ -9,9 +9,12 @@
         'content.destinations.' + $route.params.finca + '.title'
       "
     />
-    <cb-body-text :translation-key="'content.destinations.'+$route.params.finca+'.text1'" />
-    <cb-google-map :file="fincaFile" :finca="$route.params.finca"/>
-
+    <cb-body-text
+      :translation-key="
+        'content.destinations.' + $route.params.finca + '.text1'
+      "
+    />
+    <cb-google-map :file="fincaFile" :finca="$route.params.finca" />
   </v-container>
 </template>
 
@@ -20,6 +23,23 @@ export default {
   data() {
     return {
       fincaFile: decodeURI(this.$route.params.finca) + '.json',
+    }
+  },
+  head() {
+    return {
+      title: this.$t('content.destinations.title'),
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t(
+            'content.destinations.' +
+              this.$route.params.finca +
+              '.metaDesrciption'
+          ),
+        },
+      ],
     }
   },
   nuxtI18n: {
