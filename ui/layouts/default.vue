@@ -2,8 +2,8 @@
   <v-app>
     <v-container>
       <v-row>
-        <v-col cols="12" md="4"><main-logo /></v-col>
-        <v-col cols="12" md="4"><slogan /></v-col>
+        <v-col cols="12" md="4" :class="{'centerIt': $vuetify.breakpoint.smAndDown}"><main-logo /></v-col>
+        <v-col cols="12" md="4" :class="{'centerIt': $vuetify.breakpoint.smAndDown}"><slogan /></v-col>
         <v-col cols="12" md="4">
           <v-row>
             <v-col cols="12" class="text-right"><color-mode-picker /> </v-col>

@@ -89,6 +89,7 @@ export default async () => {
     content: {
       home:{
         title: 'Colombiabonita',
+        pageTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius odio eu nisi congue, at ullamcorper libero porta. Fusce id elit enim. Nam et dictum felis, a mattis urna. ',
         metaDesrciption: 'In colombiabonita bieten wir Ihnen vier außergewöhnliche Orte, einfach, aber mit allem Komfort, wo Sie mit Ihrer Familie oder Freunden die natürliche Schönheit Kolumbiens genießen können.',
       },
       aboutUs: {
@@ -112,6 +113,11 @@ export default async () => {
             alt:'Image of house in Coveñas',
             name:'Coveñas: house "Santa Maria"',
             address:"Exit Punta Bolivar, San Antero, Córdoba, Colombia"
+          },
+          imageTextCombo:{
+            alt:"View of the beach from the air",
+            galleryLinkText:'Visit the photo gallery',
+            text:'<h2 class = "mb-2"> Services included: </h2> <ul class = "services"> <li> Service a. </li> <li> Service b. </li> <li> Service c . </li> <li> Service d. </li> <li> Service e. </li> </ul> <h2 class = "mb-2"> Services to contract *: </h2> <ul class = "services"> <li> Service v. </li> <li> Service w. </li> <li> Service x. </li> <li> Service y. </li> <li> Service z. </li> </ul> <small class = "mt-3 d-block"> * request detailed information and prices separately </small>'
           }
         },
         pradolu: {
@@ -122,6 +128,11 @@ export default async () => {
             alt:'Image of house Lucerna in Prado',
             name:'Prado: house "Lucerna"',
             address:"Puerto Hidroprado, Tolima, Colombia"
+          },
+          imageTextCombo:{
+            alt:"Piscina de la finca",
+            galleryLinkText:'Visit the photo gallery',
+            text:'<h2 class = "mb-2"> Services included: </h2> <ul class = "services"> <li> Service a. </li> <li> Service b. </li> <li> Service c . </li> <li> Service d. </li> <li> Service e. </li> </ul> <h2 class = "mb-2"> Services to contract *: </h2> <ul class = "services"> <li> Service v. </li> <li> Service w. </li> <li> Service x. </li> <li> Service y. </li> <li> Service z. </li> </ul> <small class = "mt-3 d-block"> * request detailed information and prices separately </small>'
           }
         },
         pradonat: {
@@ -132,6 +143,11 @@ export default async () => {
             alt:'Image of house Natalie in Prado',
             name:'Prado: house "Natalie"',
             address:"Puerto Hidroprado, Tolima, Colombia"
+          },
+          imageTextCombo:{
+            alt:"Piscina de la finca",
+            galleryLinkText:'Visit the photo gallery',
+            text:'<h2 class = "mb-2"> Services included: </h2> <ul class = "services"> <li> Service a. </li> <li> Service b. </li> <li> Service c . </li> <li> Service d. </li> <li> Service e. </li> </ul> <h2 class = "mb-2"> Services to contract *: </h2> <ul class = "services"> <li> Service v. </li> <li> Service w. </li> <li> Service x. </li> <li> Service y. </li> <li> Service z. </li> </ul> <small class = "mt-3 d-block"> * request detailed information and prices separately </small>'
           }
         },
         stamarta: {
@@ -142,6 +158,11 @@ export default async () => {
             alt:'View from Santa MArta',
             name:'Flat in Bahia Linda',
             address:"Bahia linda, Santa Marta, Magdalena, Colombia"
+          },
+          imageTextCombo:{
+            alt:"View of the beach from the terrace",
+            galleryLinkText:'Visit the photo gallery',
+            text:'<h2 class = "mb-2"> Services included: </h2> <ul class = "services"> <li> Service a. </li> <li> Service b. </li> <li> Service c . </li> <li> Service d. </li> <li> Service e. </li> </ul> <h2 class = "mb-2"> Services to contract *: </h2> <ul class = "services"> <li> Service v. </li> <li> Service w. </li> <li> Service x. </li> <li> Service y. </li> <li> Service z. </li> </ul> <small class = "mt-3 d-block"> * request detailed information and prices separately </small>'
           }
         }
       },

@@ -15,6 +15,14 @@
       "
     />
     <cb-google-map :file="fincaFile" :finca="$route.params.finca" />
+    <cb-image-text-combo
+    :imgPath="'/assets/imagetextcombo/'+$route.params.finca+'.jpg'"
+    :translationKeyImgAlt="'content.destinations.' + $route.params.finca + '.imageTextCombo.alt'"
+    :translationKeyGalleryLinkText="'content.destinations.' + $route.params.finca + '.imageTextCombo.galleryLinkText'"
+    :translationKeyText="'content.destinations.' + $route.params.finca + '.imageTextCombo.text'"
+    :showLinkToGallery="true"
+     :finca="$route.params.finca"
+    ></cb-image-text-combo>
   </v-container>
 </template>
 

@@ -86,6 +86,7 @@ export default async () => {
     content: {
       home:{
         title: 'Colombiabonita',
+        pageTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius odio eu nisi congue, at ullamcorper libero porta. Fusce id elit enim. Nam et dictum felis, a mattis urna. ',
         metaDesrciption: 'In Colombiabonita bieten wir Ihnen vier außergewöhnliche Orte, einfach, aber mit allem Komfort, wo Sie mit Ihrer Familie oder Freunden die natürliche Schönheit Kolumbiens genießen können.',
       },
       aboutUs: {
@@ -108,6 +109,11 @@ export default async () => {
             alt:'Bild vom Haus in Coveñas',
             name:'Coveñas: Haus "Santa Maria"',
             address:"Ausfahrt Punta Bolivar, San Antero, Córdoba, Colombia"
+          },
+          imageTextCombo:{
+            alt:"Blick auf den Strand aus der Luft",
+            galleryLinkText:'Besuchen Sie die Fotogalerie',
+            text:'<h2 class = "mb-2"> Eingeschlossene Dienste: </h2> <ul class = "services"> <li> Dienst a. </li> <li> Dienst b. </li> <li> Dienst c . </li> <li> Dienst d. </li> <li> Dienst e. </li> </ul> <h2 class = "mb-2">Zu vermietende Dienste *: </h2> <ul class = "services"> <li>Dienst v. </li> <li>Dienst w. </li> <li>Dienst x. </li> <li>Dienst y.</li> <li>Dienst z. </li> </ul> <small class = "mt-3 d-block"> * Detaillierte Informationen und Preise separat anfordern </small>'
           }
         },
         pradolu: {
@@ -118,6 +124,11 @@ export default async () => {
             alt:'Bild vom Haus in Prado',
             name:'Prado: Haus "Lucerna"',
             address:"Puerto Hidroprado, Tolima, Colombia"
+          },
+          imageTextCombo:{
+            alt:"Schwimmbad der Finca",
+            galleryLinkText:'Besuchen Sie die Fotogalerie',
+            text:'<h2 class = "mb-2"> Eingeschlossene Dienste: </h2> <ul class = "services"> <li> Dienst a. </li> <li> Dienst b. </li> <li> Dienst c . </li> <li> Dienst d. </li> <li> Dienst e. </li> </ul> <h2 class = "mb-2">Zu vermietende Dienste *: </h2> <ul class = "services"> <li>Dienst v. </li> <li>Dienst w. </li> <li>Dienst x. </li> <li>Dienst y.</li> <li>Dienst z. </li> </ul> <small class = "mt-3 d-block"> * Detaillierte Informationen und Preise separat anfordern </small>'
           }
         },
         pradonat: {
@@ -128,6 +139,11 @@ export default async () => {
             alt:'Bild vom Haus in Prado',
             name:'Prado: Haus "Natalie"',
             address:"Puerto Hidroprado, Tolima, Colombia"
+          },
+          imageTextCombo:{
+            alt:"Schwimmbad der Finca",
+            galleryLinkText:'Besuchen Sie die Fotogalerie',
+            text:'<h2 class = "mb-2"> Eingeschlossene Dienste: </h2> <ul class = "services"> <li> Dienst a. </li> <li> Dienst b. </li> <li> Dienst c . </li> <li> Dienst d. </li> <li> Dienst e. </li> </ul> <h2 class = "mb-2">Zu vermietende Dienste *: </h2> <ul class = "services"> <li>Dienst v. </li> <li>Dienst w. </li> <li>Dienst x. </li> <li>Dienst y.</li> <li>Dienst z. </li> </ul> <small class = "mt-3 d-block"> * Detaillierte Informationen und Preise separat anfordern </small>'
           }
         },
         stamarta: {
@@ -138,6 +154,11 @@ export default async () => {
             alt:'Bild Sicht aus Balkon von Wohnung',
             name:'Wohnung Sta. Marta',
             address:"Bahia linda, Santa Marta, Magdalena, Colombia"
+          },
+          imageTextCombo:{
+            alt:"Blick auf den Strand von der Terrasse der Wohnung",
+            galleryLinkText:'Besuchen Sie die Fotogalerie',
+            text:'<h2 class = "mb-2"> Eingeschlossene Dienste: </h2> <ul class = "services"> <li> Dienst a. </li> <li> Dienst b. </li> <li> Dienst c . </li> <li> Dienst d. </li> <li> Dienst e. </li> </ul> <h2 class = "mb-2">Zu vermietende Dienste *: </h2> <ul class = "services"> <li>Dienst v. </li> <li>Dienst w. </li> <li>Dienst x. </li> <li>Dienst y.</li> <li>Dienst z. </li> </ul> <small class = "mt-3 d-block"> * Detaillierte Informationen und Preise separat anfordern </small>'
           }
         }
       },

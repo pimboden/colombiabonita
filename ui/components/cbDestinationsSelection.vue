@@ -1,8 +1,9 @@
 <template>
-  <v-row v-if="items.length > 0" justify="center"  no-gutters class="destination-selector">
-    <v-col v-for="item in items" :key="item.src" cols="7" sm= "3" class="py-4 px-1">
-        <v-card
-          class="pa-0 selector"
+  <v-row v-if="items.length > 0" justify="center"  no-gutters class="destination-selector mt-6">
+    <v-col v-for="item in items" :key="item.src" cols="7" sm= "3" class="py-4 px-2 mr-auto"
+    >
+        <v-card         
+          class="selector"
           elevation="0"
           >
           <nuxt-link

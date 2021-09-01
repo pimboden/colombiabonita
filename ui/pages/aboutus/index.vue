@@ -1,5 +1,6 @@
 <template>
   <v-container class="content aboutus px-0 pt-0">
+    <cb-carousel file="home.json" img-path="home"></cb-carousel>
     <cb-page-title translation-key="content.aboutUs.title" />
     <cb-body-text translation-key="content.aboutUs.text1" />
   </v-container>

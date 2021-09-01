@@ -1,8 +1,9 @@
 <template>
   <v-container class="content home px-0 pt-0">
     <cb-carousel file="home.json" img-path="home"></cb-carousel>
-    <cb-destinations-selection :items="allItems"/>
+    <cb-page-title translation-key="content.home.pageTitle" />
     <cb-youtube-video src="https://www.youtube.com/embed/xzy4umDtA88?autoplay=1&mute=1"/>
+   <cb-destinations-selection :items="allItems"/>
   </v-container>
 </template>
 

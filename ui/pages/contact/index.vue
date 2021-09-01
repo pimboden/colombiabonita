@@ -138,7 +138,7 @@
                   :disabled="isSubmiting"
                   depressed
                   tile
-                  class="ma-2 cb primary"
+                  class="ma-2 cb cb-primary"
                   @click.stop.prevent="submit"
                   >{{ $t('contact.form.btnSend') }}
                   <template #loader>
