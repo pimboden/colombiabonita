@@ -15,7 +15,7 @@
       "
     />
     <cb-google-map :file="fincaFile" :finca="$route.params.finca" />
-    <cb-image-text-combo
+    <cb-image-text-combo v-if="$route.params.finca != 'stamarta'"
     :imgPath="'/assets/imagetextcombo/'+$route.params.finca+'.jpg'"
     :translationKeyImgAlt="'content.destinations.' + $route.params.finca + '.imageTextCombo.alt'"
     :translationKeyGalleryLinkText="'content.destinations.' + $route.params.finca + '.imageTextCombo.galleryLinkText'"
