@@ -1,6 +1,9 @@
 <template>
   <v-footer app class="cb-footer pb-0" :absolute="true">
-    <v-container>
+    <v-container  fluid class="mx-0 px-0">
+      <v-row>
+        <v-col cols="12" class="pa-0 outer-col">
+      <v-container>
       <v-row>
         <v-col cols="12" md="6">
           <v-card class="d-flex flex-column justify-center align-center mb-0 footer-col-wrapper" flat tile>
@@ -35,6 +38,9 @@
               </v-card>
             </v-card>
           </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
         </v-col>
       </v-row>
     </v-container>

@@ -39,6 +39,12 @@
   }
 }
 body {
+  .outer-col{
+    background-color:  $color-nav-bg !important;
+  }
+  .color-pickr{
+    padding-right: 1rem;
+  }
   background-color: $bg;
   color: $color;
   .centerIt{

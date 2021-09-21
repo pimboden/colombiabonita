@@ -1,14 +1,17 @@
 <template>
   <v-row class="carousel">
-    <v-col cols="12" class="pt-0">
+    <v-col cols="12" class="pt-0 content">
       <cb-spinner v-if="$fetchState.pending" />
       <v-carousel
+        cycle
+        continuous
         v-if="items.length > 0"
         hide-delimiters
         class="cb-carousel"
-        height="400"
+        height="500"
       >
-        <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
+        <v-carousel-item v-for="(item, i) in items" :key="i" eager>
+           <v-img :src="item.src" height="100%" eager/>
         </v-carousel-item>
       </v-carousel>
     </v-col>
