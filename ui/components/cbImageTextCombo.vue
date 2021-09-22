@@ -2,33 +2,30 @@
   <v-row class="image-text-combo">
     <v-col cols="12" md="6" class="image">
       <v-card class="rounded" elevation="0">
-        <template v-if="showLinkToGallery">
+        <template v-if="blok.showLinkToGallery">
           <nuxt-link
             :to="
               localePath({
-                name: 'gallery-finca',
-                params: { finca: finca },
+                name: 'gallery-slug',
+                params: { slug: blok.finca },
               })
             "
-         >
-            <div class="link-text py-4">{{ $t(translationKeyGalleryLinkText) }}</div>
-            <img :src="imgPath" :alt="$t(translationKeyImgAlt)" />
+          >
+            <div class="link-text py-4">{{ blok.galleryLinkText }}</div>
+            <img :src="blok.image.filename" :alt="blok.image.alt" />
           </nuxt-link>
         </template>
         <template v-else>
-          <img :src="imgPath" :alt="$t(translationKeyImgAlt)" />
+          <img :src="blok.image.filename" :alt="blok.image.alt" />
         </template>
       </v-card>
     </v-col>
     <v-col cols="12" md="6" class="text">
-         <v-card
-        class="d-flex align-center mb-6"
-        flat
-        height="100%"
-        tile
-      >
-      <v-card-text v-html="$t(translationKeyText)" />
-         </v-card>
+      <v-card class="d-flex align-center mb-6" flat height="100%" tile>
+        <v-card-text
+          ><rich-text-renderer v-if="blok.text" :document="blok.text"
+        /></v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -37,30 +34,14 @@
 export default {
   name: 'CbImageTextCombo',
   props: {
-    imgPath: {
-      type: String,
-      default: '',
+    blok: {
+      type: Object,
+      required: true,
     },
-    translationKeyImgAlt: {
-      type: String,
-      default: '',
-    },
-    translationKeyGalleryLinkText: {
-      type: String,
-      default: '',
-    },
-    translationKeyText: {
-      type: String,
-      default: '',
-    },
-    finca: {
-      type: String,
-      default: '',
-    },
-    showLinkToGallery: {
-      type: Boolean,
-      default: true,
-    },
+  },
+  mounted(){
+    debugger
+    console.log(this.blok)
   },
 }
 </script>

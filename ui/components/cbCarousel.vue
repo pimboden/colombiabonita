@@ -1,17 +1,16 @@
 <template>
-  <v-row class="carousel">
+  <v-row v-editable="blok" class="carousel">
     <v-col cols="12" class="pt-0 content">
-      <cb-spinner v-if="$fetchState.pending" />
       <v-carousel
         cycle
         continuous
-        v-if="items.length > 0"
+        v-if="blok.images.length > 0"
         hide-delimiters
         class="cb-carousel"
         height="500"
       >
-        <v-carousel-item v-for="(item, i) in items" :key="i" eager>
-           <v-img :src="item.src" height="100%" eager/>
+        <v-carousel-item v-for="(image, i) in blok.images" :key="i" eager>
+           <v-img :src="image.filename" height="100%" eager :alt="image.alt"/>
         </v-carousel-item>
       </v-carousel>
     </v-col>
@@ -21,37 +20,12 @@
 <script>
 export default {
   name: 'CbCarousel',
-  props: {
-    file: {
-      type: String,
-      default: '',
-    } /* name of the json file undes /static/carousels */,
-    imgPath: {
-      type: String,
-      default: '',
-    } /* name of the image folder path under /static/carousels */,
-  },
-  data() {
-    return {
-      items: [],
+    props: {
+    blok: {
+      type: Object,
+      required: true
     }
-  },
-
-  async fetch() {
-    const jsonFilePath = process.env.HOST_NAME+'/assets/carousels/' + this.file
-    this.items= await this.loadImages(jsonFilePath)
-  },
-  methods: {
-    async loadImages(jsonFilePath) {
-      const allItems = []
-      const homeCarousel = await this.$axios.$get(jsonFilePath)
-      homeCarousel.forEach((element) => {
-        const img = { src: process.env.HOST_NAME+'/assets/carousels/' + this.imgPath + '/' + element }
-        allItems.push(img)
-      })
-      return allItems
-    },
-  },
+  }
 }
 </script>
 

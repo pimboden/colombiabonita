@@ -1,6 +1,6 @@
 <template>
   <v-container class="content contact px-0 pt-0">
-    <cb-page-title translation-key="content.contact.title" />
+    <cb-page-title :blok="{title:$t('content.contact.title')}" />
     <v-row v-if="!showResult" justify="center" no-gutters>
       <v-col cols="7">
         <ValidationObserver ref="obs" v-slot="{ validated }">

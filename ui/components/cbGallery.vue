@@ -1,20 +1,19 @@
 <template>
   <v-row class="gallery"
     ><v-col cols="12">
-      <cb-spinner v-if="$fetchState.pending" />
-      <template v-if="slides.length > 0">
+      <template v-if="blok.slides.length > 0">
         <v-row>
           <v-col cols="12">
             <splide ref="primary" :options="primaryOptions">
-              <splide-slide v-for="slide in slides" :key="slide.src">
-                <img :src="slide.src" :alt="slide.alt" />
+              <splide-slide v-for="slide in blok.slides" :key="slide.filename">
+                <img :src="slide.filename" :alt="slide.alt" />
               </splide-slide>
             </splide>
           </v-col>
           <v-col cols="12">
             <splide ref="secondary" :options="secondaryOptions">
-              <splide-slide v-for="slide in slides" :key="slide.src">
-                <img :src="slide.thumbnail" :alt="$t(slide.alt)" />
+              <splide-slide v-for="slide in blok.slides" :key="slide.filename">
+                <img :src="transformImage(slide.filename, '110x70')" :alt="$t(slide.alt)" />
               </splide-slide>
             </splide>
           </v-col>
@@ -28,14 +27,10 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css'
 export default {
   name: 'CbGallery',
   props: {
-    file: {
-      type: String,
-      default: '',
-    } /* name of the json file undes /static/galleries */,
-    imgPath: {
-      type: String,
-      default: '',
-    } /* name of the image folder path under /static/galleries */,
+    blok: {
+      type: Object,
+      required: true
+    }/* name of the image folder path under /static/galleries */,
   },
   data() {
     return {
@@ -87,36 +82,19 @@ export default {
       count: 0,
     }
   },
-
-  async fetch() {
-    const jsonFilePath =
-      process.env.HOST_NAME + '/assets/galleries/' + this.file
-    await this.loadImages(jsonFilePath)
-    this.$refs.primary.sync(this.$refs.secondary.splide)
+  mounted(){
+    if(this.blok.slides.length > 0){
+        this.$refs.primary.sync(this.$refs.secondary.splide)
+    }
   },
-  fetchOnServer: false,
   methods: {
-    async loadImages(jsonFilePath) {
-      const baseImagePath =
-        process.env.HOST_NAME + '/assets/galleries/' + this.imgPath + '/'
-      const allItems = []
-      const images = await this.$axios.$get(jsonFilePath)
-      images.forEach((image) => {
-        const img = { src: baseImagePath + image.src }
-        if (image.alt) {
-          img.alt = image.alt
-        } else {
-          img.alt = 'galleryComp.noAltProvided'
-        }
-        if (image.thumbnail) {
-          img.thumbnail = baseImagePath + image.thumbnail
-        } else {
-          img.thumbnail = img.src
-        }
-        allItems.push(img)
-      })
-      this.slides = allItems
-    },
+     transformImage(image, option) {
+      if (!image) return "";
+      if (!option) return "";
+      const imageService = "https://img2.storyblok.com/";
+      const path = image.replace("https://a.storyblok.com", "");
+      return imageService + option + path;
+    }
   },
 }
 </script>

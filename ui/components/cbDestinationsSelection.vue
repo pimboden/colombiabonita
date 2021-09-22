@@ -1,18 +1,18 @@
 <template>
-  <v-row v-if="items.length > 0" justify="center"  no-gutters class="destination-selector mt-6">
-    <v-col v-for="item in items" :key="item.src" cols="7" sm= "3" class="py-4 px-2 mr-auto"
+  <v-row v-if="blok.items.length > 0" justify="center"  no-gutters class="destination-selector mt-6">
+    <v-col v-for="item in blok.items" :key="item.src" cols="7" sm= "3" class="py-4 px-2 mr-auto"
     >
         <v-card         
           class="selector"
           elevation="0"
           >
           <nuxt-link
-            :to="localePath( { name: item.path, params: { finca: item.finca }})">
+            :to="localePath( { name: 'destinations-slug', params: { slug: item.finca }})">
             <img
-              :src="'/assets/icons/selector-'+item.finca+'.png'"
-              :alt="$t('destSelectorComp.'+item.finca+'Alt')"
+              :src="item.image.filename"
+              :alt="item.image.alt"
              />
-              <figcaption>{{$t('destSelectorComp.'+item.finca+'Caption')}}</figcaption></nuxt-link
+              <figcaption>{{item.caption}}</figcaption></nuxt-link
         ></v-card>
     </v-col>
   </v-row>
@@ -22,10 +22,10 @@
 export default {
   name: 'CbDestinationsSelection',
   props: {
-    items: {
-      type: Array,
-      default: ()=> [],
-    },
-  },
+    blok: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>

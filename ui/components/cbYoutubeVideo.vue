@@ -5,7 +5,7 @@
         <iframe
           width="100%"
           height="415"
-          :src="src"
+          :src="blok.videoLink.url"
         >
         </iframe> </v-card></v-col
   ></v-row>
@@ -15,10 +15,10 @@
 export default {
   name: 'CbYoutubeVideo',
   props: {
-    src: {
-      type: String,
-      default: ''
-    },
-  },
+    blok: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>

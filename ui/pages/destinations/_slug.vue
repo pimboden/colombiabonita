@@ -27,7 +27,7 @@ export default {
     if(context.route.path && context.route.path !==''){
       fullSlug = context.route.path.substring(3)
     }
-    //slug aboutus
+    //slug destinations
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi
       .get(`cdn/stories${fullSlug}`, {
@@ -83,9 +83,9 @@ export default {
   },
   nuxtI18n: {
     paths: {
-      es: '/quienes_somos',
-      en: '/about_us',
-      de: '/ueber_uns',
+      es: '/destinos/:slug',
+      en: '/destinations/:slug',
+      de: '/zielorte/:slug',
     },
   },
 }

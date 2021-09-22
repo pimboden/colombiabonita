@@ -42,6 +42,16 @@ export default {
       ],
     }
   },
+  mounted(){
+    if(this.$route.query._storyblok_lang){
+      if(this.$route.query._storyblok_lang !== this.$i18n.locale){
+        if(this.$route.query._storyblok_lang ==="default"){
+           this.changeLanguage("es")
+        }
+        this.changeLanguage(this.$route.query._storyblok_lang )
+      }
+    }
+  },
   methods: {
     changeLanguage(code){
       this.$root.$i18n.setLocale(code)
