@@ -1,10 +1,10 @@
 <template>
   <nuxt-link :to="switchLocalePath($i18n.locale)">
     <template v-if="$vuetify.theme.dark">
-    <img src="/assets/icons/logo-colombia-bonita_dark.png" class="main-logo" :alt="$t('mainLogoComp.alt')"/>
+    <img src="/assets/icons/logo-colombia-bonita_dark.png" class="main-logo" :alt="alt"/>
     </template>
     <template v-else>
-    <img src="/assets/icons/logo-colombia-bonita_light.png" class="main-logo" :alt="$t('mainLogoComp.alt')"/>
+    <img src="/assets/icons/logo-colombia-bonita_light.png" class="main-logo" :alt="alt"/>
     </template>
     
   </nuxt-link>
@@ -12,7 +12,13 @@
 
 <script>
 export default {
- name:'MainLogo'
+ name:'MainLogo',
+  props: {
+    alt: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 

@@ -64,7 +64,9 @@ body {
   .splide__slide.is-visible.is-active {
     border-color: $color-nav-bg !important;
   }
-
+  .small-text{
+    font-size: 0.75rem;
+  }
   .page-title {
     h1 {
       text-align: center;

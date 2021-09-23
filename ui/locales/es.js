@@ -8,9 +8,6 @@ export default async () => {
       en_alt: 'Bandera de USA',
       de_alt: 'Bandera de Alemania',
     },
-    sloganComp: {
-      text: '!Auténtica y mágica!',
-    },
     galleryComp: {
       prev: 'Imagen anterior',
       next: 'Imagen siguiente',
@@ -23,26 +20,9 @@ export default async () => {
       noAltProvided: 'No hay descripcion para esta imagen',
     },
     cbFooterComp: {
-      title1: 'Siguenos en redes',
       altYoutubeLogo: 'Logo de Youtube',
       altFbLogo: 'Logo de Facebook',
       altInstLogo: 'Logo de Instagram',
-      title2: 'Contáctanos',
-      phone: '+57 311 421 31 87',
-      contactForm: 'Formulario de contacto',
-    },
-    destSelectorComp:{
-      covenasAlt: "Foto del mar de coveñas",
-      covenasCaption: "Coveñas",
-      pradoluAlt: "Foto de la guacamaya del prado",
-      pradoluCaption: "Prado - Lucerna",
-      pradonatAlt: "Foto de la guacamaya del prado",
-      pradonatCaption: "Prado - Natalie",
-      stamartaAlt: "Foto de la hamaca en Sta. Marta",
-      stamartaCaption: "Sta. Marta"
-    },
-    mainLogoComp: {
-      alt: 'Logo con un papagayo abstracto con los colores de colombia y el texto Colombia bonita',
     },
     navitems: {
       link1: 'Inicio',

@@ -8,9 +8,6 @@ export default async () => {
       en_alt: 'Flag of USA',
       de_alt: 'Flag of Germany',
     },
-    sloganComp: {
-      text: '!Authentic and magic!',
-    },
     galleryComp: {
       prev: 'Previous slide',
       next: 'Next slide',
@@ -23,26 +20,9 @@ export default async () => {
       noAltProvided: 'No description provided for this image',
     },
     cbFooterComp: {
-      title1: 'Follow us',
       altYoutubeLogo: 'Youtube logo',
       altFbLogo: 'Facebook logo',
       altInstLogo: 'Instagram logo',
-      title2: 'Contact us',
-      phone: '+57 311 421 31 87',
-      contactForm: 'Contact form',
-    },
-    destSelectorComp:{
-      covenasAlt: "The sea at coveñas",
-      covenasCaption: "Coveñas",
-      pradoluAlt: "Photo of Prado's macaw",
-      pradoluCaption: "Prado - Lucerna",
-      pradonatAlt: "Photo of Prado's macaw",
-      pradonatCaption: "Prado -Natalie ",
-      stamartaAlt: "Hammock in Santa Marta",
-      stamartaCaption: "Santa Marta"
-    },
-    mainLogoComp: {
-      alt: 'Logo with an abstract parrot with the colors of Colombia and the text Colombia bonita',
     },
     navitems: {
       link1: 'Home',

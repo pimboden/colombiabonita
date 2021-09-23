@@ -38,11 +38,7 @@ export default {
       type: Object,
       required: true,
     },
-  },
-  mounted(){
-    debugger
-    console.log(this.blok)
-  },
+  }
 }
 </script>
 
