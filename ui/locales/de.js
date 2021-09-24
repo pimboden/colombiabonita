@@ -63,5 +63,12 @@ export default async () => {
         message: "Bitte Mitteilung angeben",
       }
     },
+    content: {
+      contact: {
+        title: 'Contact',
+        metaDesrciption: ''
+      }
+    }
+
   })
 }

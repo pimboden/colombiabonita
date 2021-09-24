@@ -1,5 +1,7 @@
-import colors from 'vuetify/es5/util/colors'
 import * as path from 'path'
+import colors from 'vuetify/es5/util/colors'
+import axios from 'axios'
+
 const debugYellow = '\x1B[33m%s\x1B[0m'
 const debugHeader = '\x1B[32m%s\x1B[0m'
 
@@ -207,4 +209,47 @@ export default {
     },
     transpile: ['vee-validate/dist/rules'],
   },
+  generate: {
+    routes (callback) {
+      const token = process.env.STORYBLOCK_API_KEY
+      const version = 'draft' // 'published'
+      let cacheVersion = 0
+   
+      const toIgnore = ['_layoutsettings']
+      
+       // other routes that are not in Storyblok with their slug.
+      const routes = ['/'] // adds / directly
+   
+       // Load space and receive latest cache version key to improve performance
+      axios.get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`).then((spaceResult) => {
+   
+         // timestamp of latest publish
+         cacheVersion = spaceResult.data.space.version
+   
+         // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
+        axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&cv=${cacheVersion}&per_page=100`).then((res) => {
+          Object.keys(res.data.links).forEach((key) => {
+            if (!toIgnore.includes(res.data.links[key].slug)) {
+              const langAlternates = res.data.links[key].alternates;
+              // routes.push('/' + res.data.links[key].slug)
+              if(res.data.links[key].slug !=='home'){
+                langAlternates.forEach(langAlternate =>{
+                  const link = '/' + langAlternate.lang + '/' + langAlternate.path
+                  routes.push(link)
+                })
+              }
+              else{
+                langAlternates.forEach(langAlternate =>{
+                  const link = '/' + langAlternate.lang
+                  routes.push(link)
+                })
+              }
+            }
+          })
+   
+          callback(null, routes)
+        })
+      }) 
+    }
+  } 
 }

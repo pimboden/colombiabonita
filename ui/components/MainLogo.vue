@@ -16,7 +16,7 @@ export default {
   props: {
     alt: {
       type: String,
-      required: true,
+      default: ''
     },
   },
 }

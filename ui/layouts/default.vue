@@ -29,7 +29,6 @@
         <v-col cols="12" class="pa-0 outer-col">
           <v-container class="pa-0">
             <main-nav />
-            {{ story }}
           </v-container>
         </v-col>
       </v-row>
@@ -92,28 +91,6 @@ export default {
       })
 
     document.querySelector('html').setAttribute('lang', this.$i18n.locale)
-
-    this.$storybridge(
-      () => {
-        const storyblokInstance = new StoryblokBridge()
-        // Listen to Storyblok's Visual Editor event
-        storyblokInstance.on(['input', 'published', 'change'], (event) => {
-          if (event.action == 'input') {
-            if (event.story.id === this.story.id) {
-              this.story.content = event.story.content
-            }
-          } else {
-            this.$nuxt.$router.go({
-              path: this.$nuxt.$router.currentRoute,
-              force: true,
-            })
-          }
-        })
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
   },
   data() {
     return {
