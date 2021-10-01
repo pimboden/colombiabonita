@@ -65,8 +65,8 @@ export default async () => {
     },
     content: {
       contact: {
-        title: 'Contact',
-        metaDesrciption: ''
+        title: 'Kontakt',
+        metaDesrciption: 'Kontaktformular'
       }
     }
 

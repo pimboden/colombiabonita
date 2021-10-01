@@ -42,24 +42,34 @@
         </v-col>
       </v-row>
     </v-container>
-    <cb-footer :leftFooterTitle="blok.left_footer_title" 
+    <cb-footer :left-footer-title="blok.left_footer_title" 
     :right-footer-title="blok.right_footer_title"
-    :fbLink="blok.facebook_link"
-    :ytLink="blok.youtube_link"
-    :insLink="blok.instagram_link"
+    :fb-link="blok.facebook_link"
+    :yt-link="blok.youtube_link"
+    :ins-link="blok.instagram_link"
     :phone="blok.phone"
-    :contactFormLinkTitle="blok.contact_form_link_title"/>
+    :contact-form-link-title="blok.contact_form_link_title"/>
   </v-app>
 </template>
 
 <script>
 import StoryblokClient from 'storyblok-js-client'
 export default {
+  data() {
+    return {
+      blok: {},
+    }
+  },
   mounted() {
-    debugger
+    this.loadData()
+    this.$root.$on('language-changed', this.loadData)
+  },
+  methods:{
+    
+    loadData(){
     const version = this.$route.query._storyblok ? 'draft' : 'published'
 
-    //slug layout
+    // slug layout
     // Load the JSON from the API - loadig the home content (index page)
     const Storyblok = new StoryblokClient({
       accessToken: process.env.STORYBLOCK_API_KEY,
@@ -91,11 +101,7 @@ export default {
       })
 
     document.querySelector('html').setAttribute('lang', this.$i18n.locale)
-  },
-  data() {
-    return {
-      blok: {},
-    }
-  },
+  }
+  }
 }
 </script>

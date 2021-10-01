@@ -100,7 +100,7 @@ export default {
       },
       {
         textKey: 'navitems.link2',
-        to: 'aboutus',
+        to: 'about_us',
         childs: [],
       },
       {
@@ -139,7 +139,7 @@ export default {
       },
       {
         textKey: 'navitems.link4',
-        to: 'gallery',
+        to: 'galleries',
         childs: [
           {
             textKey: 'navitems.linkGallerypradolu',

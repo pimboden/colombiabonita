@@ -14,7 +14,6 @@ export default {
     // In real world project you should ask for correct version of the content
     // according to the environment you are deploying to.
     // const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
-    debugger
     const version =
       context.query._storyblok || context.isDev ? 'draft' : 'published'
     let fullSlug =
@@ -79,6 +78,13 @@ export default {
         console.error(error)
       }
     )
+  },
+  nuxtI18n: {
+    paths: {
+      es: '/',
+      en: '/',
+      de: '/',
+    },
   },
 }
 </script>

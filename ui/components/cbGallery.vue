@@ -10,7 +10,7 @@
               </splide-slide>
             </splide>
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" class="pb-10">
             <splide ref="secondary" :options="secondaryOptions">
               <splide-slide v-for="slide in blok.slides" :key="slide.filename">
                 <img :src="transformImage(slide.filename, '110x70')" :alt="$t(slide.alt)" />

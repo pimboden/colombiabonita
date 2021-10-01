@@ -208,7 +208,7 @@ export default {
       useShortDoctype: true,
     },
     transpile: ['vee-validate/dist/rules'],
-  },
+  }/*,
   generate: {
     routes (callback) {
       const token = process.env.STORYBLOCK_API_KEY
@@ -251,5 +251,5 @@ export default {
         })
       }) 
     }
-  } 
+  } */
 }

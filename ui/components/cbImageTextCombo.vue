@@ -6,7 +6,7 @@
           <nuxt-link
             :to="
               localePath({
-                name: 'gallery-slug',
+                name: 'galleries-slug',
                 params: { slug: blok.finca },
               })
             "
