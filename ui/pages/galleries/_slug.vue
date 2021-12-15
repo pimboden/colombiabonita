@@ -26,7 +26,7 @@ export default {
     if(context.route.path && context.route.path !==''){
       fullSlug = context.route.path.substring(3)
     }
-    //slug fotogallerie
+    // slug fotogallerie
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi
       .get(`cdn/stories${fullSlug}`, {

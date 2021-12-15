@@ -13,7 +13,7 @@
           <v-col cols="12" class="pb-10">
             <splide ref="secondary" :options="secondaryOptions">
               <splide-slide v-for="slide in blok.slides" :key="slide.filename">
-                <img :src="transformImage(slide.filename, '110x70')" :alt="$t(slide.alt)" />
+                <img :src="transformImage(slide.filename, '110x70')" :alt="slide.alt" />
               </splide-slide>
             </splide>
           </v-col>
@@ -40,7 +40,8 @@ export default {
         perMove: 1,
         gap: '1rem',
         pagination: false,
-        fixedHeight: 600,
+        fixedWidth: '100%',
+        heightRatio:0.5,
         cover: true,
         arrows: true,
         i18n: {
@@ -99,4 +100,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.splide__slide{
+  background-size: contain !important;
+}
+</style>

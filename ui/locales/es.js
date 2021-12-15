@@ -52,7 +52,7 @@ export default async () => {
         reasons:{
           cotizacion: "Cotización",
           reclamo: "Reclamo",
-          otro: "Otra"
+          otro: "Otra (Solicitud de información adicional)"
         },
         error:"Lamentablemente, su solicitud de contacto no pudo ser enviada.<br> Por favor, inténtelo más tarde.",
         success:"Su solicitud de contacto ha sido enviada.<br>La procesaremos lo antes posible"

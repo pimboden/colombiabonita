@@ -34,7 +34,7 @@ export default async () => {
       linkDestinationpradoNnat: 'Prado - Natalie',
       linkDestinationpradolu: 'Prado - Lucerna',
       linkDestinationcove: 'Coveñas',
-      linkDestinationstamarta: 'Sta. Marta',
+      linkDestinationstamarta: 'Santa Marta',
       linkGallerypradonat: 'Prado - Natalie',
       linkGallerypradolu: 'Prado - Lucerna',
       linkGallerycove: 'Coveñas',
@@ -51,7 +51,7 @@ export default async () => {
         reasons:{
           cotizacion: "Kostenvoranschlag",
           reclamo: "Beschwerde",
-          otro: "Sonstiges"
+          otro: "Andere Anfragen"
         },
         error:"Leider konnte Ihre Kontaktanfrage nicht versandt werden.<br> Bitte versuchen Sie es später noch einmal.",
         success:"Ihre Kontaktanfrage wurde versandt.<br>Wir werden es schnellstmöglich bearbeiten"
