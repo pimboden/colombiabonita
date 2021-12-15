@@ -1,0 +1,53 @@
+.main-nav {
+  .theme--dark.v-toolbar.v-sheet,
+  .theme--light.v-toolbar.v-sheet {
+    background-color: $color-nav-bg;
+  }
+  .theme--dark.v-btn,
+  .theme--light.v-btn {
+    color: $color-nav-fg;
+  }
+
+  .nav-item {
+    .v-btn:not(.v-btn--round).v-size--default {
+      height: 4rem;
+    }
+  }
+  .navspacer {
+    width: 1px;
+    border: 1px solid $color-nav-fg;
+  }
+  .subheader {
+    font-size: 1rem;
+  }
+  .child-item {
+    padding-left: 10px;
+  }
+}
+
+.v-menu__content {
+  .nav-menu-list.v-list.v-sheet.theme--dark,
+  .nav-menu-list.v-list.v-sheet.theme--light {
+    background-color: $color-nav-bg;
+    color: $color-nav-fg;
+    .child-spacer {
+      border: thin $color-nav-fg solid;
+      height: 1px;
+      width: calc(100% - 20px);
+      position: absolute;
+      top: 39px;
+      left: 10px;
+    }
+  }
+  .nav-menu-child.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+  .nav-menu-child.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+  .nav-menu-child.theme--dark.v-list,
+  .nav-menu-child.theme--light.v-list {
+    background-color: $color-nav-bg;
+    color: $color-nav-fg;
+  }
+  .nav-menu-child.theme--dark.v-list-item:hover::before,
+  .nav-menu-child.theme--light.v-list-item:hover::before {
+    opacity: 0.08;
+  }
+}

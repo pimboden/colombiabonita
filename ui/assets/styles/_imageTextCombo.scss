@@ -1,0 +1,24 @@
+.image-text-combo{
+  a{
+    .link-text{
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      color: $color-nav-fg;
+      background-color: $color-nav-bg;
+      border-bottom-right-radius: 20px !important;
+      border-bottom-left-radius: 20px !important;
+    }
+    img{
+      width: 100%;
+      border-radius: 20px !important;
+    }
+  }
+  .image{
+
+  }
+  .text{
+
+  }
+}

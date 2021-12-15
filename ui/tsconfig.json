@@ -27,7 +27,11 @@
       "@nuxt/types",
       "@nuxtjs/axios",
       "@nuxt/content",
-      "@types/node"
+      "@types/node",
+      "@nuxtjs/date-fns",
+      "@nuxtjs/i18n",
+      "@nuxtjs/vuetify",
+      "@nuxtjs/color-mode"
     ]
   },
   "exclude": [
