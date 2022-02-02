@@ -1,10 +1,11 @@
-@import "_colors.scss";
-@import "_spinner.scss";
-@import "_langChanger.scss";
-@import "_mainNav.scss";
-@import "_footer.scss";
-@import "_carousel.scss";
-@import "_imageTextCombo.scss";
+@import "fonts";
+@import "colors";
+@import "spinner";
+@import "langChanger";
+@import "mainNav";
+@import "footer";
+@import "carousel";
+@import "imageTextCombo";
 
 @-moz-keyframes loader {
   from {
@@ -38,7 +39,29 @@
     transform: rotate(360deg);
   }
 }
+.v-application {
+  @include Regular;
+   .title { // To pin point specific classes of some components
+    @include Regular;
+  }
+}
+
 body {
+  @include Regular;
+  .header-container{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -16px;
+    margin-bottom: -18px;
+  }
+  .main-nav{
+    &.small{
+      padding-left: 10px;
+      .v-toolbar__content {
+        padding: 0px 4px;
+      }
+    }
+  }
   .outer-col{
     background-color:  $color-nav-bg !important;
   }
@@ -50,17 +73,17 @@ body {
   .centerIt{
     text-align:center;
   }
-  .slogan {
-    color: $color-slogan;
-    font-weight: bold;
-    font-style: italic;
-    font-size: x-large;
-  }
   .main-logo {
     max-width: 350px;
     max-height: 100px;
     width: 100%
   }
+  .colormode-wrapper{
+      text-align: end;
+      justify-content: end;
+      align-items: center;
+      display: flex;
+    }
   .splide__slide.is-visible.is-active {
     border-color: $color-nav-bg !important;
   }
@@ -76,7 +99,6 @@ body {
     .selector {
       img{
         width: 100%;
-        border-radius: 20px !important;
       }
       a {
         text-align: center;

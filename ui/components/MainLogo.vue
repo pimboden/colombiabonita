@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="switchLocalePath($i18n.locale)">
+  <nuxt-link :to="localePath('/')">
     <template v-if="$vuetify.theme.dark">
     <img src="/assets/icons/logo-colombia-bonita_dark.png" class="main-logo" :alt="alt"/>
     </template>

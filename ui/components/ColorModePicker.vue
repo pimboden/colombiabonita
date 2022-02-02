@@ -1,5 +1,5 @@
 <template>
-      <span>
+      <div>
         <icon-light
           v-if="$vuetify.theme.dark"
           @click="changeColor('light')"
@@ -8,7 +8,7 @@
           v-else
           @click="changeColor('dark')"
         />
-      </span>
+      </div>
 </template>
 
 <script>

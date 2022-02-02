@@ -30,7 +30,8 @@ export default async () => {
       link3: 'Destinos',
       link4: 'Galería',
       link5: 'Tarifas',
-      link6: 'Contacto',
+      link6: 'Tarifas-Contacto',
+      link7: 'Idioma',
       linkDestinationpradonat: 'Prado - Natalie',
       linkDestinationpradolu: 'Prado - Lucerna',
       linkDestinationcove: 'Coveñas',
@@ -39,7 +40,9 @@ export default async () => {
       linkGallerypradolu: 'Prado - Lucerna',
       linkGallerycove: 'Coveñas',
       linkGallerystamarta: 'Sta. Marta',
-
+      lang_es: 'Español',
+      lang_en: 'English',
+      lang_de: 'Deutsch'
     },
     contact: {
       form:{

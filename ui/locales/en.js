@@ -31,6 +31,7 @@ export default async () => {
       link4: 'Gallery',
       link5: 'Prices',
       link6: 'Contact',
+      link7: 'Language',
       linkDestinationpradonat: 'Prado - Natalie',
       linkDestinationpradolu: 'Prado - Lucerna',
       linkDestinationcove: 'Coveñas',
@@ -39,6 +40,9 @@ export default async () => {
       linkGallerypradolu: 'Prado - Lucerna',
       linkGallerycove: 'Coveñas',
       linkGallerystamarta: 'Santa Marta',
+      lang_es: 'Español',
+      lang_en: 'English',
+      lang_de: 'Deutsch'
 
     },
     contact: {
