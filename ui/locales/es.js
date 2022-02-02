@@ -8,6 +8,9 @@ export default async () => {
       en_alt: 'Bandera de USA',
       de_alt: 'Bandera de Alemania',
     },
+    gallery:{
+      gottoDestination: "Descripcion detallada del lugar"
+    },
     galleryComp: {
       prev: 'Imagen anterior',
       next: 'Imagen siguiente',
@@ -71,7 +74,7 @@ export default async () => {
     content: {
       contact: {
         title: 'Contáctenos',
-        metaDesrciption: 'Formulario de contaco'
+        metaDesrciption: 'Tairfas y Contacto'
       }
     }
 

@@ -12,7 +12,7 @@
                 name: 'destinations-slug',
                 params: { slug: $route.params.slug },
               })"
-            > Descripcion  detalladas del lugar  </v-btn>
+            >{{ $t('gallery.gottoDestination') }}</v-btn>
       </v-col>
     </v-row>
   </div>

@@ -8,6 +8,9 @@ export default async () => {
       en_alt: 'Flag of USA',
       de_alt: 'Flag of Germany',
     },
+    gallery:{
+      gottoDestination: "Detailed description of the site"
+    },
     galleryComp: {
       prev: 'Previous slide',
       next: 'Next slide',

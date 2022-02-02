@@ -1,17 +1,20 @@
 <template>
-  <v-row v-editable="blok" class="carousel" v-if = "blok.images.length > 0">
+  <v-row v-if = "blok.images.length > 0" v-editable="blok" class="carousel">
     <v-col cols="12" class="pt-0 content">
       <v-carousel
-        cycle
-        continuous
         v-if="blok.images.length > 1"
+        :cycle="false"
+        :continuous="false"
         hide-delimiters
         show-arrows-on-hover
         class="cb-carousel"
         height="700"
       >
         <v-carousel-item v-for="(image, i) in blok.images" :key="i" eager>
+          <div class="banner-content">
            <v-img :src="image.filename" height="700" eager :alt="image.alt"/>
+           <div v-if="image.alt" class="banner-text"><span>{{image.alt}}</span></div>
+           </div>
         </v-carousel-item>
       </v-carousel>
       <v-img v-else :src="blok.images[0].filename" height="700" eager :alt="blok.images[0].alt"/>

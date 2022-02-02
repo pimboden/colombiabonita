@@ -8,6 +8,9 @@ export default async () => {
       en_alt: 'Flagge von USA',
       de_alt: 'Flagge von Deutschland',
     },
+    gallery:{
+      gottoDestination: "Ausführliche Beschreibung des Standorts"
+    },
     galleryComp: {
       prev: 'Vorheriges Bild',
       next: 'Nächstes Bild',
