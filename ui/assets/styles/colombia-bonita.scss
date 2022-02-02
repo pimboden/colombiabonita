@@ -1,10 +1,11 @@
-@import "_colors.scss";
-@import "_spinner.scss";
-@import "_langChanger.scss";
-@import "_mainNav.scss";
-@import "_footer.scss";
-@import "_carousel.scss";
-@import "_imageTextCombo.scss";
+@import "fonts";
+@import "colors";
+@import "spinner";
+@import "langChanger";
+@import "mainNav";
+@import "footer";
+@import "carousel";
+@import "imageTextCombo";
 
 @-moz-keyframes loader {
   from {
@@ -38,33 +39,74 @@
     transform: rotate(360deg);
   }
 }
-body {
-  .outer-col{
-    background-color:  $color-nav-bg !important;
+.v-application {
+  @include Regular;
+  .title {
+    // To pin point specific classes of some components
+    @include Regular;
   }
-  .color-pickr{
+}
+
+body {
+  @include Regular;
+  .header-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -16px;
+    margin-bottom: -18px;
+  }
+  .main-nav {
+    &.small {
+      padding-left: 10px;
+      .v-toolbar__content {
+        padding: 0px 4px;
+      }
+    }
+  }
+  .banner-content {
+    .banner-text {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      color: white;
+      font-weight: 900;
+      font-size: 1.5rem;
+      span {
+        background-color: #3f3f3e9e;
+        padding: 2px 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+  .outer-col {
+    background-color: $color-nav-bg !important;
+  }
+  .color-pickr {
     padding-right: 1rem;
   }
   background-color: $bg;
   color: $color;
-  .centerIt{
-    text-align:center;
-  }
-  .slogan {
-    color: $color-slogan;
-    font-weight: bold;
-    font-style: italic;
-    font-size: x-large;
+  .centerIt {
+    text-align: center;
   }
   .main-logo {
     max-width: 350px;
     max-height: 100px;
-    width: 100%
+    width: 100%;
+  }
+  .colormode-wrapper {
+    text-align: end;
+    justify-content: end;
+    align-items: center;
+    display: flex;
   }
   .splide__slide.is-visible.is-active {
     border-color: $color-nav-bg !important;
   }
-  .small-text{
+  .small-text {
     font-size: 0.75rem;
   }
   .page-title {
@@ -74,9 +116,8 @@ body {
   }
   .destination-selector {
     .selector {
-      img{
+      img {
         width: 100%;
-        border-radius: 20px !important;
       }
       a {
         text-align: center;
@@ -86,18 +127,18 @@ body {
       }
     }
   }
-  .destination-detail{
-    .GMap{
-      .map-info-window{
-        .img >img{
+  .destination-detail {
+    .GMap {
+      .map-info-window {
+        .img > img {
           width: 250px;
           height: 150px;
         }
-        .name{
+        .name {
           font-size: 1.25rem;
           font-weight: bold;
         }
-        .address{
+        .address {
           font-size: 1rem;
           font-weight: normal;
         }
@@ -109,14 +150,23 @@ body {
     display: flex;
 
     i {
-        transform: rotateY(180deg);
+      transform: rotateY(180deg);
     }
   }
   .v-btn.cb-primary.theme--dark,
   .v-btn.cb-primary.theme--light {
     border-color: $color-nav-bg;
     background-color: $color-nav-bg;
-    color:$color-nav-fg;
+    color: $color-nav-fg;
   }
-
+  .contact {
+    .menu-info {
+      padding-left: 45px;
+      div {
+        padding: 10px 20px;
+        background-color: $bg;
+        border: thin solid $border-color;
+      }
+    }
+  }
 }

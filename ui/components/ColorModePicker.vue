@@ -1,5 +1,5 @@
 <template>
-      <span>
+      <div>
         <icon-light
           v-if="$vuetify.theme.dark"
           @click="changeColor('light')"
@@ -8,7 +8,7 @@
           v-else
           @click="changeColor('dark')"
         />
-      </span>
+      </div>
 </template>
 
 <script>
@@ -22,14 +22,20 @@ components: {
   },
   mounted(){
     this.$vuetify.theme.dark = this.$colorMode.value ==='dark'
+    const html  = document.getElementsByTagName("HTML")[0]
     if(this.$vuetify.theme.dark){
      this.$colorMode.value ='dark'
      this.$colorMode.preference = 'dark'
+     html.classList.remove('light-mode')
+     html.classList.add('dark-mode')
     }
     else{
      this.$colorMode.value ='light'
      this.$colorMode.preference = 'light'
+     html.classList.remove('dark-mode')
+     html.classList.add('light-mode')
     }
+    
   },
   methods: {
     changeColor (color){

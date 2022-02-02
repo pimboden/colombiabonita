@@ -1,0 +1,95 @@
+
+@mixin fontface($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-Regular', normal, normal, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-Italic', normal, italic, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-Bold', bold, normal, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-BoldItalic', bold, italic, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-Medium', 200, normal, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-MediumItalic', 200, italic, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-Light', 100, normal, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-LightItalic', 100, italic, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-Medium', 300, normal, ttf);
+@include fontface('Rubik', '../../assets/fonts/rubik/Rubik-MediumItalic', 300, italic, ttf);
+
+
+
+@mixin Regular{
+    font-family: 'Rubik' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+@mixin Italic{
+    font-family: 'Rubik' !important;
+    font-weight: normal !important;
+    font-style: italic !important;
+}
+@mixin Bold {
+    font-family: 'Rubik' !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+}
+
+@mixin BoldItalic {
+    font-family: 'Rubik' !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+}
+
+@mixin Medium {
+    font-family: 'Rubik' !important;
+    font-weight: 200 !important;
+    font-style: normal !important;
+}
+
+@mixin MediumItalic {
+    font-family: 'Rubik' !important;
+    font-weight: 200 !important;
+    font-style: italic !important;
+}
+
+@mixin Light {
+    font-family: 'Rubik' !important;
+    font-weight: 100 !important;
+    font-style: normal !important;
+}
+
+@mixin LightItalic {
+    font-family: 'Rubik' !important;
+    font-weight: 100 !important;
+    font-style: italic !important;
+}
+
+@mixin Medium {
+    font-family: 'Rubik' !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+}
+
+@mixin MediumItalic {
+    font-family: 'Rubik' !important;
+    font-weight: 300 !important;
+    font-style: italic !important;
+}
+

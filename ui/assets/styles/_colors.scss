@@ -1,4 +1,4 @@
-:root {
+body .theme--light {
   --color: #243746;
   --color-primary: #158876;
   --color-secondary: #0e2233;
@@ -6,11 +6,11 @@
   --bg-secondary: #fff;
   --border-color: #ddd;
   --color-slogan: #1C2D69;
-  --color-nav-bg: #FCBF00;
+  --color-nav-bg: #F9E79F;
   --color-nav-fg: #3f3f3e;
 }
 
-.dark-mode {
+body .theme--dark {
   --color: #ebf4f1;
   --color-primary: #41b38a;
   --color-secondary: #fdf9f3;
@@ -19,7 +19,7 @@
   --border-color: #0d2538;
   --color-dark-blue: #1C2D69;
   --color-slogan: #ffffff;
-  --color-nav-bg: #FCBF00;
+  --color-nav-bg: #F9E79F;
   --color-nav-fg: #3f3f3e;
 }
 

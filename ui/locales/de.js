@@ -8,6 +8,9 @@ export default async () => {
       en_alt: 'Flagge von USA',
       de_alt: 'Flagge von Deutschland',
     },
+    gallery:{
+      gottoDestination: "Ausführliche Beschreibung des Standorts"
+    },
     galleryComp: {
       prev: 'Vorheriges Bild',
       next: 'Nächstes Bild',
@@ -31,7 +34,8 @@ export default async () => {
       link4: 'Gallerie',
       link5: 'Preise',
       link6: 'Kontakt',
-      linkDestinationpradoNnat: 'Prado - Natalie',
+      link7: 'Sprache',
+      linkDestinationpradonat: 'Prado - Natalie',
       linkDestinationpradolu: 'Prado - Lucerna',
       linkDestinationcove: 'Coveñas',
       linkDestinationstamarta: 'Santa Marta',
@@ -39,9 +43,13 @@ export default async () => {
       linkGallerypradolu: 'Prado - Lucerna',
       linkGallerycove: 'Coveñas',
       linkGallerystamarta: 'Santa Marta',
+      lang_es: 'Español',
+      lang_en: 'English',
+      lang_de: 'Deutsch'
     },
     contact: {
       form:{
+        finca:" Lugar que me interesa",
         completeName: "Vollständiger Name",
         phone: "Telefonnummer",
         email: "E-Mail Adresse",
@@ -53,6 +61,9 @@ export default async () => {
           reclamo: "Beschwerde",
           otro: "Andere Anfragen"
         },
+        pricePrado:"Precio por persona/día incluyendo las 3 comidas del Menú* del día Col$ 112000.— (mínimo 5 personas)<br/>*consulte <a href='https://colombiabonita.tk/' target='_blank'>lista de Menus </a> <br/><br>Si prefiere sin comida menciónelo en su solicitud de cotización.",
+        priceCov:"Precio por persona/dia incluyendo 3 deliciosas comidas típicas costeñas  $ 70000.—por persona/dia (mínimo 5 personas) <br><br>Si prefiere únicamente con desayuno, menciónalo en su solicitud de cotización",
+        priceStaMarta:"Precio temporada baja:  250000. —por día.  <br/>Temporada Alta 600000.--  (Semana Santa, Fin Año, mes de Julio)",
         error:"Leider konnte Ihre Kontaktanfrage nicht versandt werden.<br> Bitte versuchen Sie es später noch einmal.",
         success:"Ihre Kontaktanfrage wurde versandt.<br>Wir werden es schnellstmöglich bearbeiten"
       },

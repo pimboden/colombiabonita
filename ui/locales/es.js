@@ -8,6 +8,9 @@ export default async () => {
       en_alt: 'Bandera de USA',
       de_alt: 'Bandera de Alemania',
     },
+    gallery:{
+      gottoDestination: "Descripcion detallada del lugar"
+    },
     galleryComp: {
       prev: 'Imagen anterior',
       next: 'Imagen siguiente',
@@ -30,7 +33,8 @@ export default async () => {
       link3: 'Destinos',
       link4: 'Galería',
       link5: 'Tarifas',
-      link6: 'Contacto',
+      link6: 'Tarifas-Contacto',
+      link7: 'Idioma',
       linkDestinationpradonat: 'Prado - Natalie',
       linkDestinationpradolu: 'Prado - Lucerna',
       linkDestinationcove: 'Coveñas',
@@ -39,10 +43,13 @@ export default async () => {
       linkGallerypradolu: 'Prado - Lucerna',
       linkGallerycove: 'Coveñas',
       linkGallerystamarta: 'Sta. Marta',
-
+      lang_es: 'Español',
+      lang_en: 'English',
+      lang_de: 'Deutsch'
     },
     contact: {
       form:{
+        finca:" Lugar que me interesa",
         completeName: "Nombre completo",
         phone: "Número telefónico",
         email: "Correo electrónico",
@@ -54,6 +61,9 @@ export default async () => {
           reclamo: "Reclamo",
           otro: "Otra (Solicitud de información adicional)"
         },
+        pricePrado:"Precio por persona/día incluyendo las 3 comidas del Menú* del día Col$ 112000.— (mínimo 5 personas)<br/>*consulte <a href='https://colombiabonita.tk/' target='_blank'>lista de Menus </a> <br/><br>Si prefiere sin comida menciónelo en su solicitud de cotización.",
+        priceCov:"Precio por persona/dia incluyendo 3 deliciosas comidas típicas costeñas  $ 70000.—por persona/dia (mínimo 5 personas) <br><br>Si prefiere únicamente con desayuno, menciónalo en su solicitud de cotización",
+        priceStaMarta:"Precio temporada baja:  250000. —por día.  <br/>Temporada Alta 600000.--  (Semana Santa, Fin Año, mes de Julio)",
         error:"Lamentablemente, su solicitud de contacto no pudo ser enviada.<br> Por favor, inténtelo más tarde.",
         success:"Su solicitud de contacto ha sido enviada.<br>La procesaremos lo antes posible"
 
@@ -68,7 +78,7 @@ export default async () => {
     content: {
       contact: {
         title: 'Contáctenos',
-        metaDesrciption: 'Formulario de contaco'
+        metaDesrciption: 'Tairfas y Contacto'
       }
     }
 

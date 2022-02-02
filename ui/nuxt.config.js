@@ -1,6 +1,5 @@
+/* eslint-disable no-console */
 import * as path from 'path'
-import colors from 'vuetify/es5/util/colors'
-import axios from 'axios'
 
 const debugYellow = '\x1B[33m%s\x1B[0m'
 const debugHeader = '\x1B[32m%s\x1B[0m'
@@ -75,6 +74,7 @@ export default {
     { src: '~/plugins/axios.ts' },
     { src: '~/plugins/splide.client.js', ssr: false },
     { src: '~/plugins/rich-text-renderer.js' },
+    { src: '~/plugins/vuetify.js', ssr: false  },
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -177,18 +177,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/styles/variables.scss'],
     theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
+      dark: false
     },
   },
 

@@ -1,46 +1,33 @@
 <template>
   <v-app>
-    <v-container>
+    <v-container class="header-container">
       <v-row>
         <v-col
-          cols="12"
-          md="4"
-          :class="{ centerIt: $vuetify.breakpoint.smAndDown }"
+          cols="8"
           ><main-logo :alt="blok.logo_alt"
         /></v-col>
-        <v-col
-          cols="12"
-          md="4"
-          :class="{ centerIt: $vuetify.breakpoint.smAndDown }"
-          ><cb-slogan :text="blok.slogan"
-        /></v-col>
-        <v-col cols="12" md="4">
-          <v-row>
-            <v-col cols="12" class="text-right color-pickr"
-              ><color-mode-picker />
-            </v-col>
-          </v-row>
-          <lang-changer />
+        <v-col cols="4" class="colormode-wrapper">
+              <color-mode-picker />
+              <main-nav class="small hidden-md-and-up"/>  
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid class="mx-0 px-0">
+    <v-container fluid class="mx-0 px-0 hidden-sm-and-down">
       <v-row>
         <v-col cols="12" class="pa-0 outer-col">
-          <v-container class="pa-0">
             <main-nav />
-          </v-container>
         </v-col>
       </v-row>
     </v-container>
     <v-container>
-      <v-row>
+      <v-row class="pb-16">
         <v-col cols="12" class="main-content-wrapper">
           <v-main class="pl-0">
             <nuxt />
           </v-main>
         </v-col>
       </v-row>
+      <v-spacer></v-spacer>
     </v-container>
     <cb-footer :left-footer-title="blok.left_footer_title" 
     :right-footer-title="blok.right_footer_title"

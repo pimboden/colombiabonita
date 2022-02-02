@@ -1,10 +1,41 @@
 <template>
   <v-container class="content contact px-0 pt-0">
-    <cb-page-title :blok="{title:$t('content.contact.title')}" />
+    <cb-page-title :blok="{ title: $t('content.contact.title') }" />
     <v-row v-if="!showResult" justify="center" no-gutters>
       <v-col cols="7">
         <ValidationObserver ref="obs" v-slot="{ validated }">
           <v-container>
+            <v-row>
+              <v-col cols="12" align="center" justify="end">
+                <v-select
+                  v-model="finca"
+                  :items="fincas"
+                  outlined
+                  prepend-icon="mdi-message-question-outline"
+                  item-text="translatedValue"
+                  item-value="emailValue"
+                  hide-details
+                  :menu-props="{ top: false, offsetY: true }"
+                  :label="$t('contact.form.finca')"
+                ></v-select>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col cols="12" class="menu-info">
+                <div
+                  v-if="finca == 'Prado-Lucerna' || finca == 'Prado-Natalie'"
+                  v-html="$t('contact.form.pricePrado')"
+                ></div>
+                <div
+                  v-else-if="finca == 'Coveñas'"
+                  v-html="$t('contact.form.priceCov')"
+                ></div>
+                <div
+                  v-else-if="finca == 'Sta. Marta'"
+                  v-html="$t('contact.form.priceStaMarta')"
+                ></div>
+              </v-col>
+            </v-row>
             <v-row>
               <v-col cols="12" align="center" justify="end">
                 <ValidationProvider
@@ -16,7 +47,7 @@
                   <v-text-field
                     v-model="completeName"
                     maxlength="50"
-                    filled
+                    outlined
                     type="text"
                     prepend-icon="mdi-account-outline"
                     :label="$t('contact.form.completeName')"
@@ -41,7 +72,7 @@
                   <v-text-field
                     v-model="phone"
                     maxlength="15"
-                    filled
+                    outlined
                     type="tel"
                     prepend-icon="mdi-phone-outline"
                     :label="$t('contact.form.phone')"
@@ -66,7 +97,7 @@
                   <v-text-field
                     v-model="email"
                     maxlength="50"
-                    filled
+                    outlined
                     type="email"
                     prepend-icon="mdi-email-outline"
                     :label="$t('contact.form.email')"
@@ -85,7 +116,7 @@
                 <v-select
                   v-model="reason"
                   :items="reasons"
-                  filled
+                  outlined
                   prepend-icon="mdi-message-question-outline"
                   item-text="translatedValue"
                   item-value="emailValue"
@@ -106,7 +137,7 @@
                   <v-textarea
                     v-model="message"
                     maxlength="50"
-                    filled
+                    outlined
                     rows="4"
                     prepend-icon="mdi-message-outline"
                     :label="$t('contact.form.message')"
@@ -121,24 +152,14 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="12" align="right" justify="end">
-                <recaptcha
-                  data-badge="inline"
-                  data-size="invisible"
-                  @recaptcha-error="recaptachaError"
-                  @recaptcha-success="recaptchaSuccess"
-                  @recaptcha-expired="recaptchaExpired"
-                />
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="12" align="center" justify="end">
+              <v-col cols="6" align="center" justify="end">
                 <v-btn
                   :loading="isSubmiting"
                   :disabled="isSubmiting"
                   depressed
+                  outlined
                   tile
-                  class="ma-2 cb cb-primary"
+                  class="ma-2"
                   @click.stop.prevent="submit"
                   >{{ $t('contact.form.btnSend') }}
                   <template #loader>
@@ -147,6 +168,15 @@
                     </span>
                   </template>
                 </v-btn>
+              </v-col>
+              <v-col cols="6" align="right" justify="end">
+                <recaptcha
+                  data-badge="inline"
+                  data-size="invisible"
+                  @recaptcha-error="recaptachaError"
+                  @recaptcha-success="recaptchaSuccess"
+                  @recaptcha-expired="recaptchaExpired"
+                />
               </v-col>
             </v-row>
           </v-container>
@@ -188,7 +218,26 @@ export default {
       phone: '',
       email: '',
       message: '',
+      finca: 'Prado-Lucerna',
       reason: 'Cotizacion',
+      fincas: [
+        {
+          emailValue: 'Prado-Lucerna',
+          translatedValue: this.$t('navitems.linkDestinationpradonat'),
+        },
+        {
+          emailValue: 'Prado-Natalie',
+          translatedValue: this.$t('navitems.linkDestinationpradolu'),
+        },
+        {
+          emailValue: 'Coveñas',
+          translatedValue: this.$t('navitems.linkDestinationcove'),
+        },
+        {
+          emailValue: 'Sta. Marta',
+          translatedValue: this.$t('navitems.linkDestinationstamarta'),
+        },
+      ],
       reasons: [
         {
           emailValue: 'Cotizacion',
@@ -240,6 +289,7 @@ export default {
           template_id: process.env.EMAILJS_TEMPLATE_ID,
           user_id: process.env.EMAILJS_UID,
           template_params: {
+            finca: this.finca,
             completeName: this.completeName,
             phone: this.phone,
             email: this.email,
@@ -263,8 +313,7 @@ export default {
         }
         this.sent = true
         this.isSubmiting = false
-      }
-      else{
+      } else {
         this.isSubmiting = false
       }
     },
