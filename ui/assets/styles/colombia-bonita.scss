@@ -41,71 +41,72 @@
 }
 .v-application {
   @include Regular;
-   .title { // To pin point specific classes of some components
+  .title {
+    // To pin point specific classes of some components
     @include Regular;
   }
 }
 
 body {
   @include Regular;
-  .header-container{
+  .header-container {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: -16px;
     margin-bottom: -18px;
   }
-  .main-nav{
-    &.small{
+  .main-nav {
+    &.small {
       padding-left: 10px;
       .v-toolbar__content {
         padding: 0px 4px;
       }
     }
   }
-  .banner-content{
-  .banner-text{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    color: white;
-    font-weight: 900;
-    font-size: 1.5rem;
-    span{
-      background-color: #3f3f3e9e;
-    padding: 2px 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  .banner-content {
+    .banner-text {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      color: white;
+      font-weight: 900;
+      font-size: 1.5rem;
+      span {
+        background-color: #3f3f3e9e;
+        padding: 2px 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
     }
   }
-}
-  .outer-col{
-    background-color:  $color-nav-bg !important;
+  .outer-col {
+    background-color: $color-nav-bg !important;
   }
-  .color-pickr{
+  .color-pickr {
     padding-right: 1rem;
   }
   background-color: $bg;
   color: $color;
-  .centerIt{
-    text-align:center;
+  .centerIt {
+    text-align: center;
   }
   .main-logo {
     max-width: 350px;
     max-height: 100px;
-    width: 100%
+    width: 100%;
   }
-  .colormode-wrapper{
-      text-align: end;
-      justify-content: end;
-      align-items: center;
-      display: flex;
-    }
+  .colormode-wrapper {
+    text-align: end;
+    justify-content: end;
+    align-items: center;
+    display: flex;
+  }
   .splide__slide.is-visible.is-active {
     border-color: $color-nav-bg !important;
   }
-  .small-text{
+  .small-text {
     font-size: 0.75rem;
   }
   .page-title {
@@ -115,7 +116,7 @@ body {
   }
   .destination-selector {
     .selector {
-      img{
+      img {
         width: 100%;
       }
       a {
@@ -126,18 +127,18 @@ body {
       }
     }
   }
-  .destination-detail{
-    .GMap{
-      .map-info-window{
-        .img >img{
+  .destination-detail {
+    .GMap {
+      .map-info-window {
+        .img > img {
           width: 250px;
           height: 150px;
         }
-        .name{
+        .name {
           font-size: 1.25rem;
           font-weight: bold;
         }
-        .address{
+        .address {
           font-size: 1rem;
           font-weight: normal;
         }
@@ -149,14 +150,23 @@ body {
     display: flex;
 
     i {
-        transform: rotateY(180deg);
+      transform: rotateY(180deg);
     }
   }
   .v-btn.cb-primary.theme--dark,
   .v-btn.cb-primary.theme--light {
     border-color: $color-nav-bg;
     background-color: $color-nav-bg;
-    color:$color-nav-fg;
+    color: $color-nav-fg;
   }
-
+  .contact {
+    .menu-info {
+      padding-left: 45px;
+      div {
+        padding: 10px 20px;
+        background-color: $bg;
+        border: thin solid $border-color;
+      }
+    }
+  }
 }

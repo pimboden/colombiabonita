@@ -1,43 +1,22 @@
 .cb-footer {
+  background-color: $color-nav-bg;
   .vertical-line{
     border-left: 2px solid $color-nav-fg;
     position: relative;
     top: 10px;
     left: -1px;
-    height: calc(100% - 10px);
+    height: calc(100% - 30px);
     float: left;
   }
 
-  &.theme--light.v-footer,
-  &.theme--dark.v-footer {
-    background-color: transparent;
-  }
-  .container {
+  .footer-col-wrapper {
     background-color: $color-nav-bg;
     color: $color-nav-fg;
-  }
-  .footer-col-wrapper.theme--light.v-card,
-  .footer-col-wrapper.theme--dark.v-card {
-    background-color: $color-nav-bg;
-    color: $color-nav-fg;
-    .footer-col-title {
+    .footer-title {
       font-size: 1.2rem;
       font-weight: bold;
     }
-    .theme--light.v-card,
-    .theme--dark.v-card {
-      background-color: $color-nav-bg;
-      color: $color-nav-fg;
-    }
-    .theme--light.v-card,
-    .theme--dark.v-card {
-      background-color: $color-nav-bg;
-      color: $color-nav-fg;
-    }
-    .theme--light.v-sheet--outlined,
-    .theme--dark.v-sheet--outlined {
-      border: none;
-    }
+
     .contact-link {
       color: $color-nav-fg;
       padding-left: 50px;

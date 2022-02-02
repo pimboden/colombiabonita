@@ -50,6 +50,7 @@ export default async () => {
     },
     contact: {
       form:{
+        finca:" Lugar que me interesa",
         completeName: "Full name",
         phone: "Phone number",
         email: "Email address",
@@ -61,6 +62,9 @@ export default async () => {
           reclamo: "Complaint",
           otro: "Other (Request for further information)"
         },
+        pricePrado:"Precio por persona/día incluyendo las 3 comidas del Menú* del día Col$ 112000.— (mínimo 5 personas)<br/>*consulte <a href='https://colombiabonita.tk/' target='_blank'>lista de Menus </a> <br/><br>Si prefiere sin comida menciónelo en su solicitud de cotización.",
+        priceCov:"Precio por persona/dia incluyendo 3 deliciosas comidas típicas costeñas  $ 70000.—por persona/dia (mínimo 5 personas) <br><br>Si prefiere únicamente con desayuno, menciónalo en su solicitud de cotización",
+        priceStaMarta:"Precio temporada baja:  250000. —por día.  <br/>Temporada Alta 600000.--  (Semana Santa, Fin Año, mes de Julio)",
         error:"Sorry, your contact request could not be sent.<br> Please try again later.",
         success:"Your contact request has been sent.<br>We will process it as soon as possible"
 

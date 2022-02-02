@@ -9,6 +9,12 @@
   }
 
   .nav-item {
+    &.language{
+      padding-left: 3rem;
+    }
+    .v-btn__content{
+      color: $color;
+    }
     .v-btn:not(.v-btn--round).v-size--default {
       height: 4rem;
     }

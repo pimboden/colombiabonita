@@ -9,12 +9,13 @@
           v-for="(navItem, navItemIndex) in navItems"
           :key="navItem.textKey"
           class="nav-item"
+          :class="{'language': navItem.isLang}"
         >
           <template v-if="!navItem.isLang && navItem.childs.length == 0">
             <v-btn text :to="localePath(navItem.to)" exact>
               {{ $t(navItem.textKey) }}
             </v-btn>
-            <nav-spacer v-if="navItemIndex < navItems.length - 1" />
+            <nav-spacer v-if="navItemIndex < navItems.length - 2" />
           </template>
           <template v-else>
             <v-menu
@@ -22,7 +23,7 @@
               offset-y
               transition="slide-x-transition"
               class="nav-menu"
-              :class="{'language': navItem.isLang}"
+              
             >
               <template #activator="{ on, attrs }">
                 <div class="nav-menu-item">
@@ -218,28 +219,7 @@ export default {
       {
         textKey: "navitems.link6",
         to: "contact",
-        childs: [
-          {
-            textKey: "navitems.linkGallerypradonat",
-            on: {
-              name: "galleries-slug",
-              params: { slug: "pradonat" },
-            },
-          },
-          {
-            textKey: "navitems.linkGallerycove",
-            to: {
-              name: "galleries-slug",
-              params: { slug: "covenas" },
-            },
-          },
-          {
-            textKey: "navitems.linkGallerystamarta",
-            to: {
-              name: "galleries-slug",
-              params: { slug: "stamarta" },
-            },
-          }],
+        childs: [],
       },
       {
         textKey: "navitems.link7",

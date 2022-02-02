@@ -21,7 +21,6 @@ components: {
     IconDark
   },
   mounted(){
-    debugger
     this.$vuetify.theme.dark = this.$colorMode.value ==='dark'
     const html  = document.getElementsByTagName("HTML")[0]
     if(this.$vuetify.theme.dark){
