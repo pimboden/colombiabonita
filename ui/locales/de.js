@@ -49,7 +49,7 @@ export default async () => {
     },
     contact: {
       form:{
-        finca:" Lugar que me interesa",
+        finca:" Ort, an dem ich interessiert bin",
         completeName: "Vollständiger Name",
         phone: "Telefonnummer",
         email: "E-Mail Adresse",
@@ -61,9 +61,9 @@ export default async () => {
           reclamo: "Beschwerde",
           otro: "Andere Anfragen"
         },
-        pricePrado:"Precio por persona/día incluyendo las 3 comidas del Menú* del día Col$ 112000.— (mínimo 5 personas)<br/>*consulte <a href='https://colombiabonita.tk/' target='_blank'>lista de Menus </a> <br/><br>Si prefiere sin comida menciónelo en su solicitud de cotización.",
-        priceCov:"Precio por persona/dia incluyendo 3 deliciosas comidas típicas costeñas  $ 70000.—por persona/dia (mínimo 5 personas) <br><br>Si prefiere únicamente con desayuno, menciónalo en su solicitud de cotización",
-        priceStaMarta:"Precio temporada baja:  250000. —por día.  <br/>Temporada Alta 600000.--  (Semana Santa, Fin Año, mes de Julio)",
+        pricePrado:"Preis pro Person/Tag einschließlich der 3 Mahlzeiten des <a href='https://colombiabonita.tk/' target='_blank'>Tagesmenüs</a> Col$ 112000.-   (mindestens 5 Personen) <br/><br>Wenn Sie kein Essen bevorzugen, geben Sie dies bitte in Ihrer Angebotsanfrage an.",
+        priceCov:"Preis pro Person/Tag einschließlich Frühstück und Mittagessen.  Köstliche typische Küstengerichte, die über einem Holzfeuer gekocht werden: $ 70000,- pro Person/Tag (mindestens 5 Personen).",
+        priceStaMarta:"Preis Nebensaison: 250000 pro Tag <br/>Hochsaison 600000.--  (Ostern, Dezember/Januar, Juli)",
         error:"Leider konnte Ihre Kontaktanfrage nicht versandt werden.<br> Bitte versuchen Sie es später noch einmal.",
         success:"Ihre Kontaktanfrage wurde versandt.<br>Wir werden es schnellstmöglich bearbeiten"
       },

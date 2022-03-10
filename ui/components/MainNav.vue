@@ -108,7 +108,7 @@
             </v-list-item>
           </template>
 
-          <template v-else>
+          <template v-else-if ="!navItem.isLang && navItem.childs.length == 0">
             <v-list-item :key="navItem.textKey" :to="localePath(navItem.to)" router exact>
               <v-list-item-content>
                 <v-list-item-title v-text="$t(navItem.textKey)" />

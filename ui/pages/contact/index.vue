@@ -152,7 +152,7 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="6" align="center" justify="end">
+              <v-col cols="12" md="6" align="center" justify="end">
                 <v-btn
                   :loading="isSubmiting"
                   :disabled="isSubmiting"
@@ -169,7 +169,7 @@
                   </template>
                 </v-btn>
               </v-col>
-              <v-col cols="6" align="right" justify="end">
+              <v-col cols="12" md="6" align="center">
                 <recaptcha
                   data-badge="inline"
                   data-size="invisible"
