@@ -61,9 +61,9 @@ export default async () => {
           reclamo: "Beschwerde",
           otro: "Andere Anfragen"
         },
-        pricePrado:"Preis pro Person/Tag einschließlich der 3 Mahlzeiten des <a href='https://colombiabonita.tk/' target='_blank'>Tagesmenüs</a> Col$ 112000.-   (mindestens 5 Personen) <br/><br>Wenn Sie kein Essen bevorzugen, geben Sie dies bitte in Ihrer Angebotsanfrage an.",
-        priceCov:"Preis pro Person/Tag einschließlich Frühstück und Mittagessen.  Köstliche typische Küstengerichte, die über einem Holzfeuer gekocht werden: $ 70000,- pro Person/Tag (mindestens 5 Personen).",
-        priceStaMarta:"Preis Nebensaison: 250000 pro Tag <br/>Hochsaison 600000.--  (Ostern, Dezember/Januar, Juli)",
+        pricePrado:"Unsere Preise beinhalten den Hin- und Rücktransfer mit dem Boot, Frühstück, Mittagessen und leichtes Abendessen. Siehe die <a href='http://menu.colombiabonita.com/' target='_blank'>Tagesmenüs</a>",
+        priceCov:"Unsere Preise beinhalten den Hin- und Rücktransfer mit dem Boot, Frühstück, Mittagessen und leichtes Abendessen.",
+        priceStaMarta:"Unsere Preise beinhalten den Hin- und Rücktransfer mit dem Boot, Frühstück, Mittagessen und leichtes Abendessen.",
         error:"Leider konnte Ihre Kontaktanfrage nicht versandt werden.<br> Bitte versuchen Sie es später noch einmal.",
         success:"Ihre Kontaktanfrage wurde versandt.<br>Wir werden es schnellstmöglich bearbeiten"
       },

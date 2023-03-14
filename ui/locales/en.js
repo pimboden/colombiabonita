@@ -62,9 +62,9 @@ export default async () => {
           reclamo: "Complaint",
           otro: "Other (Request for further information)"
         },
-        pricePrado:"Price per person/day including the 3 meals of the <a href='https://colombiabonita.tk/' target='_blank'>menu* of the day </a> Col$ 112000.— (minimum 5 persons) <br/><br/>If you prefer without food please mention it in your quote request.",
-        priceCov:"Price per person/day including 3 delicious typical coastal meals $ 70000.-per person/day (minimum 5 persons)<br><br>If you prefer breakfast only, please mention it in your quotation request.",
-        priceStaMarta:"Price low season: 250000. -per day.<br/>High season 600000.-- (Easter, New Year's Eve, July)",
+        pricePrado:"Our rates include round trip boat transfer, breakfast, lunch and light dinner. See the <a href='http://menu.colombiabonita.com/' target='_blank'>menu* of the day </a>",
+        priceCov:"Our rates include round trip boat transfer, breakfast, lunch and light dinner.",
+        priceStaMarta:"Our rates include round trip boat transfer, breakfast, lunch and light dinner.",
         error:"Sorry, your contact request could not be sent.<br> Please try again later.",
         success:"Your contact request has been sent.<br>We will process it as soon as possible"
 

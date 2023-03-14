@@ -33,7 +33,7 @@ export default async () => {
       link3: 'Destinos',
       link4: 'Galería',
       link5: 'Tarifas',
-      link6: 'Tarifas-Contacto',
+      link6: 'Contacto',
       link7: 'Idioma',
       linkDestinationpradonat: 'Prado - Natalie',
       linkDestinationpradolu: 'Prado - Lucerna',
@@ -61,9 +61,9 @@ export default async () => {
           reclamo: "Reclamo",
           otro: "Otra (Solicitud de información adicional)"
         },
-        pricePrado:"Precio por persona/día incluyendo las 3 comidas del <a href='https://colombiabonita.tk/' target='_blank'>menú* del día</a> Col$ 112000.— (mínimo 5 personas)<br/><br/>Si prefiere sin comida menciónelo en su solicitud de cotización.",
-        priceCov:"Precio por persona/dia incluyendo desayuno y almuerzo tarde.  Deliciosas comidas típicas costeñas hecho a fuego de leña:  $ 70000.—por persona/dia (mínimo 5 personas) ",
-        priceStaMarta:"Precio temporada baja:  250000. —por día.  <br/>Temporada Alta 600000.--  (Semana Santa, Fin Año, mes de Julio)",
+        pricePrado:"Nuestras tarifas incluyen traslado en bote de ida y regreso, desayuno, almuerzo y cena ligera. Vea el <a href='http://menu.colombiabonita.com/' target='_blank'>menú* del día</a>",
+        priceCov:"Nuestras tarifas incluyen traslado en bote de ida y regreso, desayuno, almuerzo y cena ligera.",
+        priceStaMarta:"Nuestras tarifas incluyen traslado en bote de ida y regreso, desayuno, almuerzo y cena ligera.",
         error:"Lamentablemente, su solicitud de contacto no pudo ser enviada.<br> Por favor, inténtelo más tarde.",
         success:"Su solicitud de contacto ha sido enviada.<br>La procesaremos lo antes posible"
 
