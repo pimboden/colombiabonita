@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import * as path from 'path'
+import fs from 'fs'
 
 const debugYellow = '\x1B[33m%s\x1B[0m'
 const debugHeader = '\x1B[32m%s\x1B[0m'
@@ -197,6 +198,12 @@ export default {
       useShortDoctype: true,
     },
     transpile: ['vee-validate/dist/rules'],
+  },
+  server: {
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
+    }
   }/*,
   generate: {
     routes (callback) {
